@@ -12,7 +12,7 @@ window.Vue = require('vue');
 import Vuex from 'vuex';
 
 Vue.use(Vuex);
-import storeData from "./client/store/index";
+import storeData from "./store/client/index";
 
 const store = new Vuex.Store(
     storeData
