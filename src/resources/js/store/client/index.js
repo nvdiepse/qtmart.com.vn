@@ -1,6 +1,8 @@
 export default {
-    modules: {
-    },
-    plugins: [
-    ]
+    getters: {},
+    mutations: {},
+    state: {},
+    actions: {},
+    modules: {},
+    plugins: []
 }

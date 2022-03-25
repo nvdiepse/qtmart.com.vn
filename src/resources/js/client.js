@@ -16,26 +16,23 @@ import storeData from "./store/client/index";
 
 const store = new Vuex.Store(
     storeData
-)
+);
 
-
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
-
+// import router from './router/client';
 Vue.component('client-component', require('./components/ClientComponent.vue').default);
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+import VueRouter from 'vue-router';
+import {routes} from '../js/router/client';
+Vue.use(VueRouter);
+
+const router = new VueRouter({
+    base: 'app/',
+    routes,
+    mode: 'history'
+});
 
 const app = new Vue({
     el: '#client',
+    router,
     store
 });
