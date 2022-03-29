@@ -1,0 +1,66 @@
+{
+  "common": {
+    "title": {
+      "": ""
+    }
+  },
+  "tool-tip": {
+    "add": "導線を追加する",
+    "delete": "Delete"
+  },
+  "button": {
+    "cancel": "キャンセル",
+    "success": "完了",
+    "add-name-template": "この内容をテンプレートとして保存",
+    "save": "保存"
+  },
+  "text": {
+  },
+  "title": {
+    "cancel": "cancel",
+    "success": "success121",
+    "add-name-mail-template": "テンプレート名入力"
+  },
+  "message": {
+    "500": "Internal server error"
+  },
+  "label": {
+    "name-mail-template": "テンプレート名"
+  },
+  "placeholder": {
+    "cancel": " キャンセル",
+    "success": " 完了"
+  },
+  "error-message": {
+    "network": "サーバーへ接続ができません。インターネット接続を確認してください",
+    "create-senario": "シナリオ作成に失敗しました",
+    "set-activity-inactive" : "アクティビティのステータス更新に失敗しました",
+    "delete-activity": "アクティビティの削除に失敗しました",
+    "send-demo-mail": "テスト送信に失敗しました",
+    "create-mail-template": "テンプレート新規作成に失敗しました",
+    "update-mail-template" : "テンプレート新規更新に失敗しました",
+    "get-senario-list" : "シナリオが取得できませんでした",
+    "get-activity-list" : "アクティビティのデータが取得できませんでした",
+    "delete-mail-template" : "メールテンプレートの削除に失敗しました",
+    "update-profile": "プロフィール編集に失敗しました",
+    "update-password": "現在のパスワードが違います",
+    "update-activity-fail": "内部サーバーエラー"
+  },
+  "success-message": {
+    "update-activity-success": "アクティビティ更新に成功しました",
+    "success": "アクティビティ作成に成功しました",
+    "get-user-list": "Get list success",
+    "get-scenario_list": "Get scenario list success",
+    "fail": "Change password fail",
+    "get-scenario_type": "Get scenario type success",
+    "create-senario": "シナリオ作成に成功しました",
+    "set-activity-inactive": "アクティビティのステータス更新に成功する",
+    "delete-activity": "アクティビティの削除に成功しました",
+    "send-demo-mail" : "テスト送信に成功しました",
+    "create-mail-template": "テンプレート新規作成に成功しました",
+    "update-mail-template" : "テンプレート新規更新に成功しました",
+    "delete-mail-template" : "メールテンプレートの削除に成功しました",
+    "update-profile": "プロフィールを編集しました",
+    "update-password": "パスワードを変更しました"
+  }
+}
