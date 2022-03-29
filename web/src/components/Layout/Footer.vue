@@ -9,7 +9,7 @@
               <div class="media-body">
                 <div class="clearfix">
                   <div class="newsletter-header">
-                    <h5 class="newsletter-title">Sign up to Newsletter</h5>
+                    <h5 class="newsletter-title">Đăng ký để nhận khuyến mại</h5>
                     <span class="newsletter-marketing-text"
                       >...and receive
                       <strong>$20 coupon for first shopping</strong>
@@ -18,11 +18,8 @@
                   <!-- .newsletter-header -->
                   <div class="newsletter-body">
                     <form class="newsletter-form">
-                      <input
-                        type="text"
-                        placeholder="Enter your email address"
-                      />
-                      <button class="button" type="button">Sign up</button>
+                      <input type="text" placeholder="Địa chỉ email  " />
+                      <button class="button" type="button">Đăng ký</button>
                     </form>
                   </div>
                   <!-- .newsletter body -->
@@ -37,28 +34,18 @@
           <div class="footer-social-icons">
             <ul class="social-icons nav">
               <li class="nav-item">
-                <a class="sm-icon-label-link nav-link" href="#">
+                <a class="sm-icon-label-link nav-link" :href="media.facebook">
                   <i class="fa fa-facebook"></i> Facebook</a
                 >
               </li>
               <li class="nav-item">
-                <a class="sm-icon-label-link nav-link" href="#">
+                <a class="sm-icon-label-link nav-link" :href="media.twitter">
                   <i class="fa fa-twitter"></i> Twitter</a
                 >
               </li>
               <li class="nav-item">
-                <a class="sm-icon-label-link nav-link" href="#">
+                <a class="sm-icon-label-link nav-link" :href="media.google">
                   <i class="fa fa-google-plus"></i> Google+</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="sm-icon-label-link nav-link" href="#">
-                  <i class="fa fa-vimeo-square"></i> Vimeo</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="sm-icon-label-link nav-link" href="#">
-                  <i class="fa fa-rss"></i> RSS</a
                 >
               </li>
             </ul>
@@ -172,16 +159,14 @@
                   </span>
                   <div class="media-body">
                     <span class="call-us-title"
-                      >Got Questions ? Call us 24/7!</span
+                      >Nếu bạn có câu hỏi? Liên hệ chúng tôi 24/7</span
                     >
-                    <span class="call-us-text"
-                      >(800) 8001-8588, (0600) 874 548</span
-                    >
+                    <span class="call-us-text">0966 162 162</span>
                     <address class="footer-contact-address">
-                      17 Princess Road, London, Greater London NW1 8JR, UK
+                      255 Kim chung - Lai Xá - Hoài Đức - Hà Nội
                     </address>
-                    <a href="#" class="footer-address-map-link">
-                      <i class="tm tm-map-marker"></i>Find us on map</a
+                    <a href="/lien-he.html" class="footer-address-map-link">
+                      <i class="tm tm-map-marker"></i>Địa chỉ tại đây</a
                     >
                   </div>
                   <!-- .media-body -->
@@ -196,7 +181,7 @@
                   </span>
                   <div class="media-body">
                     <h5 class="footer-payment-info-title">
-                      We are using safe payments
+                      Phương thức thanh toán
                     </h5>
                     <div class="footer-payment-icons">
                       <ul class="list-payment-icons nav">
@@ -232,7 +217,7 @@
                     </div>
                     <!-- .footer-payment-icons -->
                     <div class="footer-secure-by-info">
-                      <h6 class="footer-secured-by-title">Secured by:</h6>
+                      <h6 class="footer-secured-by-title">Bảo mật:</h6>
                       <ul class="footer-secured-by-icons">
                         <li class="nav-item">
                           <img
@@ -265,7 +250,7 @@
             <div class="columns">
               <aside class="widget clearfix">
                 <div class="body">
-                  <h4 class="widget-title">Find it Fast</h4>
+                  <h4 class="widget-title">Tìm kiếm nhanh</h4>
                   <div class="menu-footer-menu-1-container">
                     <ul id="menu-footer-menu-1" class="menu">
                       <li class="menu-item">
@@ -331,29 +316,17 @@
             <div class="columns">
               <aside class="widget clearfix">
                 <div class="body">
-                  <h4 class="widget-title">Customer Care</h4>
+                  <h4 class="widget-title">Khách hàng quan tâm</h4>
                   <div class="menu-footer-menu-3-container">
                     <ul id="menu-footer-menu-3" class="menu">
                       <li class="menu-item">
-                        <a href="login-and-register.html">My Account</a>
+                        <a href="track-your-order.html">Kiểm tra đơn hàng</a>
                       </li>
                       <li class="menu-item">
-                        <a href="track-your-order.html">Track Order</a>
+                        <a href="wishlist.html">Sản phẩm ưu thích</a>
                       </li>
                       <li class="menu-item">
-                        <a href="shop.html">Shop</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="wishlist.html">Wishlist</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="about.html">About Us</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="terms-and-conditions.html">Returns/Exchange</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="faq.html">FAQs</a>
+                        <a href="about.html">Thông tin về QTmart</a>
                       </li>
                     </ul>
                   </div>
@@ -373,12 +346,12 @@
       <div class="site-info">
         <div class="col-full">
           <div class="copyright">
-            Copyright &copy; 2017 <a href="home-v1.html">Techmarket</a> Theme.
-            All rights reserved.
+            Copyright &copy; 2022 <a href="home-v1.html">Qtmart.com.vn</a>. Đã
+            đăng ký bản quyền
           </div>
           <!-- .copyright -->
           <div class="credit">
-            Made with <i class="fa fa-heart"></i> by bcube.
+            Phát triển bơi <i class="fa fa-heart"></i> Qtmart.com.vn
           </div>
           <!-- .credit -->
         </div>
@@ -390,9 +363,10 @@
   </footer>
 </template>
 <script>
+import Common from "../../constants/common";
 export default {
   data: () => ({
-    username: "",
+    media: Common.MEDIA,
   }),
   computed: {},
   async created() {},
@@ -411,5 +385,8 @@ export default {
 
 .cls-3 {
   fill: #3265b0;
+}
+button.button {
+  color: wheat;
 }
 </style>

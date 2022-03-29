@@ -1,0 +1,22 @@
+{
+  "common": {
+    "title": {
+      "": ""
+    }
+  },
+  "label": {
+    "": ""
+  },
+  "button": {
+    "": ""
+  },
+  "error-message": {
+    "": ""
+  },
+  "success-message": {
+    "get-user-list": "Get list success",
+    "get-scenario_lít": "Get scenario list success",
+    "success": "Successful",
+    "fail": "Change password fail"
+  }
+}

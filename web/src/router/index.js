@@ -2,7 +2,12 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import HomePage from "../views/HomePage.vue";
 import BlogPage from "../views/Blog/BlogPage.vue";
-import AboutPage from "../views/About.vue";
+import AboutPage from "../views/AboutPage.vue";
+import TrackOrderPage from "../views/TrackOrderPage.vue";
+import CartPage from "../views/CartPage.vue";
+import WishlistPage from "../views/WishlistPage.vue";
+import ComparePage from "../views/ComparePage.vue";
+import ContactPage from "../views/ContactPage.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -10,21 +15,50 @@ const routes = [
     path: "/",
     name: "HomePage",
     component: HomePage,
-    meta: { title: "ダッシュボード" },
+    meta: { title: "Home page" },
   },
   {
-    path: "/blog.html",
+    path: "/tin-tuc.html",
     name: "BlogPage",
     component: BlogPage,
     meta: { title: "Blog page" },
   },
   {
-    path: "/about.html",
+    path: "/ve-chung-toi.html",
     name: "AboutPage",
     component: AboutPage,
     meta: { title: "About page" },
   },
-  
+  {
+    path: "/kiem-tra-don-hang.html",
+    name: "TrackOrderPage",
+    component: TrackOrderPage,
+    meta: { title: "TrackOrder page" },
+  },
+  {
+    path: "/cart.html",
+    name: "CartPage",
+    component: CartPage,
+    meta: { title: "CartPage page" },
+  },
+  {
+    path: "/ua-thich.html",
+    name: "WishlistPage",
+    component: WishlistPage,
+    meta: { title: "Wishlist page" },
+  },
+  {
+    path: "/so-sanh.html",
+    name: "ComparePage",
+    component: ComparePage,
+    meta: { title: "Wishlist page" },
+  },
+  {
+    path: "/lien-he.html",
+    name: "ContactPage",
+    component: ContactPage,
+    meta: { title: "Wishlist page" },
+  },
 ];
 
 const router = new VueRouter({

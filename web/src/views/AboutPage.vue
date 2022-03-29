@@ -29,9 +29,9 @@
   </div>
 </template>
 <script>
-import Footer from "../../components/Layout/Footer.vue";
-import Header from "../../components/Layout/Header.vue";
-import TopBar from "../../components/Layout/TopBar.vue";
+import Footer from "../components/Layout/Footer.vue";
+import Header from "../components/Layout/Header.vue";
+import TopBar from "../components/Layout/TopBar.vue";
 export default {
   components: {
     TopBar,
