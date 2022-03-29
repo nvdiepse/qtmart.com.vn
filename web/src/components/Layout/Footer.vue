@@ -11,8 +11,7 @@
                   <div class="newsletter-header">
                     <h5 class="newsletter-title">Đăng ký để nhận khuyến mại</h5>
                     <span class="newsletter-marketing-text"
-                      >...and receive
-                      <strong>$20 coupon for first shopping</strong>
+                      >... Đăng ký để nhận khuyến mại
                     </span>
                   </div>
                   <!-- .newsletter-header -->
