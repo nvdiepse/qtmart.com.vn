@@ -2,13 +2,13 @@
 
 namespace App\Repositories;
 
-use BaseRepository;
+use App\Models\Article;
 
 class ArticleRepository extends BaseRepository
 {
 
     public function getModel()
     {
-        // TODO: Implement getModel() method.
+        return Article::class;
     }
 }

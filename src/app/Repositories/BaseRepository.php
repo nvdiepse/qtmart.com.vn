@@ -1,5 +1,5 @@
 <?php
-
+namespace App\Repositories;
 use Illuminate\Contracts\Container\BindingResolutionException;
 
 /**
@@ -48,9 +48,9 @@ abstract class BaseRepository
      * @param int $limit
      * @return mixed
      */
-    public function getPaginate(int $limit = 25)
+    public function getPaginate($orderBy = "asc", int $limit = 25)
     {
-        return $this->model->paginate($limit);
+        return $this->model->orderBy($orderBy)->paginate($limit);
     }
 
     /**

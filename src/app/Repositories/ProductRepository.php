@@ -2,13 +2,15 @@
 
 namespace App\Repositories;
 
-use BaseRepository;
-
 class ProductRepository extends BaseRepository
 {
-
-    public function getModel()
+    public function getModel(): string
     {
-        // TODO: Implement getModel() method.
+        return Product::class;
+    }
+
+    public function getDealsOfTheWeek()
+    {
+        // return $this->model->where('')
     }
 }

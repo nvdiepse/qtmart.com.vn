@@ -3,21 +3,40 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+Route::get('/', "Client\SiteController@home");
+Route::get('/about', "Client\SiteController@about");
+Route::get('/contact', "Client\SiteController@contact");
+Route::get('/compare', "Client\SiteController@compare");
+Route::get('/wishlist', "Client\SiteController@wishlist");
+Route::get('/search', "Client\SiteController@search");
+Route::get('/checkout', "Client\SiteController@checkout");
+Route::get('/cart', "Client\SiteController@cart");
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('/', 'HomeController@index')->name('home');
+
+    Route::group(['prefix' => 'product'], function () {
+        Route::get('/create', 'Admin\ProductController@create');
+        Route::get('/', 'Admin\ProductController@index');
+    });
+
+    Route::group(['prefix' => 'blog'], function () {
+        Route::get('/', 'Admin\ArticleController@index');
+        Route::get('/create', 'Admin\ArticleController@create');
+    });
+
+    Route::group(['prefix' => 'event'], function () {
+    });
+
+    Route::group(['prefix' => 'marketing'], function () {
+    });
+
+    Route::group(['prefix' => 'order'], function () {
+    });
+
+    Route::group(['prefix' => 'report'], function () {
+    });
+});

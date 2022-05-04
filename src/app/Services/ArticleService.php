@@ -50,6 +50,6 @@ class ArticleService
      */
     public function getAll(string $orderBy = "asc", $limit = 10)
     {
-        return $this->articleRepository->getAll();
+        return $this->articleRepository->getAll($orderBy, $limit);
     }
 }
