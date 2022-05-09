@@ -91,7 +91,7 @@ abstract class BaseRepository
      */
     public function delete($id): bool
     {
-        $result = $this->find($id);
+        $result = $this->findOne($id);
         if ($result) {
             $result->delete();
             return true;
@@ -120,5 +120,10 @@ abstract class BaseRepository
     public function first($condition)
     {
         return $this->model->where($condition)->first();
+    }
+
+    public function findBySlug($slug)
+    {
+        return $this->model->where('slug', $slug)->first();
     }
 }

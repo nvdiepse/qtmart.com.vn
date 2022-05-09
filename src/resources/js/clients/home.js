@@ -1,13 +1,13 @@
 const Vue = require('vue');
 const axios = require('../services/api');
 var app = new Vue({
-    el: "#home_app",
+    el: "#primary",
     data: {
         productDealsOfWeek: [],
     },
 
-    created() {
-        this.getProductDealsOfWeek();
+    async created() {
+        await this.getProductDealsOfWeek();
     },
     methods: {
         async getProductDealsOfWeek() {

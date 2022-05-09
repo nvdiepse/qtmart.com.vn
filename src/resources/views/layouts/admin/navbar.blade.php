@@ -1,186 +1,164 @@
-<ul class="menu-inner py-1">
-    <!-- Dashboard -->
-    <li class="menu-item active">
-        <a href="{{ url('admin/') }}" class="menu-link">
-            <i class="menu-icon tf-icons bx bx-home-circle"></i>
-            <div data-i18n="Analytics">Tổng quan</div>
-        </a>
-    </li>
+<nav class="pcoded-navbar">
+    <div class="pcoded-inner-navbar main-menu">
+        <div class="pcoded-navigatio-lavel">Navigation</div>
+        <ul class="pcoded-item pcoded-left-item">
+            <li class="pcoded-hasmenu active pcoded-trigger">
+                <a href="javascript:void(0)">
+                    <span class="pcoded-micon"><i class="feather icon-home"></i></span>
+                    <span class="pcoded-mtext">Kho sản phẩm</span>
+                </a>
+                <ul class="pcoded-submenu">
+                    <li class="active">
+                        <a href="index-1.htm">
+                            <span class="pcoded-mtext">Kho hàng</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="dashboard-crm.htm">
+                            <span class="pcoded-mtext">Sản phẩm</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="pcoded-hasmenu">
+                <a href="javascript:void(0)">
+                    <span class="pcoded-micon"><i class="feather icon-sidebar"></i></span>
+                    <span class="pcoded-mtext">Bán hàng</span>
+                </a>
+                <ul class="pcoded-submenu">
+                    <li class=" pcoded-hasmenu">
+                        <a href="javascript:void(0)">
+                            <span class="pcoded-mtext">Đơn hàng</span>
+                        </a>
+                        <ul class="pcoded-submenu">
+                            <li class=" ">
+                                <a href="menu-static.htm">
+                                    <span class="pcoded-mtext">Vận chuyển</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class=" pcoded-hasmenu">
+                        <a href="javascript:void(0)">
+                            <span class="pcoded-mtext">Báo cáo & Tài chính</span>
+                        </a>
+                        <ul class="pcoded-submenu">
+                            <li class=" ">
+                                <a href="menu-horizontal-static.htm" target="_blank">
+                                    <span class="pcoded-mtext">Báo cáo</span>
+                                </a>
+                            </li>
+                            <li class=" ">
+                                <a href="menu-horizontal-fixed.htm" target="_blank">
+                                    <span class="pcoded-mtext">Kế toán</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class=" ">
+                        <a href="menu-bottom.htm">
+                            <span class="pcoded-mtext">Bottom Menu</span>
+                        </a>
+                    </li>
+                    <li class=" ">
+                        <a href="box-layout.htm" target="_blank">
+                            <span class="pcoded-mtext">Box Layout</span>
+                        </a>
+                    </li>
+                    <li class=" ">
+                        <a href="menu-rtl.htm" target="_blank">
+                            <span class="pcoded-mtext">RTL</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="pcoded-hasmenu">
+                <a href="javascript:void(0)">
+                    <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
+                    <span class="pcoded-mtext">Báo cáo & tài chính</span>
+                </a>
+                <ul class="pcoded-submenu">
+                    <li class=" ">
+                        <a href="widget-statistic.htm">
+                            <span class="pcoded-mtext">Statistic</span>
+                        </a>
+                    </li>
+                    <li class=" ">
+                        <a href="widget-data.htm">
+                            <span class="pcoded-mtext">Data</span>
+                        </a>
+                    </li>
+                    <li class=" ">
+                        <a href="widget-chart.htm">
+                            <span class="pcoded-mtext">Chart Widget</span>
+                        </a>
+                    </li>
 
-    <!-- Layouts -->
-    <li class="menu-item">
-        <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <i class="menu-icon tf-icons bx bx-layout"></i>
-            <div data-i18n="Layouts">Kho sản phẩm</div>
-        </a>
+                </ul>
+            </li>
+            <li class="pcoded-hasmenu">
+                <a href="javascript:void(0)">
+                    <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
+                    <span class="pcoded-mtext">Tiện ích</span>
+                </a>
+                <ul class="pcoded-submenu">
+                    <li class=" ">
+                        <a href="widget-statistic.htm">
+                            <span class="pcoded-mtext">Statistic</span>
+                        </a>
+                    </li>
+                    <li class=" ">
+                        <a href="widget-data.htm">
+                            <span class="pcoded-mtext">Data</span>
+                        </a>
+                    </li>
+                    <li class=" ">
+                        <a href="widget-chart.htm">
+                            <span class="pcoded-mtext">Chart Widget</span>
+                        </a>
+                    </li>
 
-        <ul class="menu-sub">
-            <li class="menu-item">
-                <a href="layouts-without-menu.html" class="menu-link">
-                    <div data-i18n="Without menu">Kho hàng</div>
+                </ul>
+            </li>
+            <li class="pcoded-hasmenu">
+                <a href="javascript:void(0)">
+                    <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
+                    <span class="pcoded-mtext">Tin tức</span>
+                </a>
+                <ul class="pcoded-submenu">
+                    <li class=" ">
+                        <a href="widget-statistic.htm">
+                            <span class="pcoded-mtext">Statistic</span>
+                        </a>
+                    </li>
+                    <li class=" ">
+                        <a href="widget-data.htm">
+                            <span class="pcoded-mtext">Data</span>
+                        </a>
+                    </li>
+                    <li class=" ">
+                        <a href="widget-chart.htm">
+                            <span class="pcoded-mtext">Chart Widget</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="pcoded-item pcoded-left-item">
+            <li class="">
+                <a href="http://html.codedthemes.com/Adminty/doc" target="_blank">
+                    <span class="pcoded-micon"><i class="feather icon-monitor"></i></span>
+                    <span class="pcoded-mtext">Cài đặt</span>
                 </a>
             </li>
-            <li class="menu-item">
-                <a href="{{ url('admin/product') }}" class="menu-link">
-                    <div data-i18n="Without navbar">Sản phẩm</div>
+            <li class="">
+                <a href="#" target="_blank">
+                    <span class="pcoded-micon"><i class="feather icon-help-circle"></i></span>
+                    <span class="pcoded-mtext">Trợ giúp</span>
                 </a>
             </li>
         </ul>
-    </li>
-
-    <!-- Layouts -->
-    <li class="menu-item">
-        <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <i class="menu-icon tf-icons bx bx-layout"></i>
-            <div data-i18n="Layouts">Tin tức</div>
-        </a>
-
-        <ul class="menu-sub">
-            <li class="menu-item">
-                <a href="layouts-without-menu.html" class="menu-link">
-                    <div data-i18n="Without menu">Tin tức</div>
-                </a>
-            </li>
-            <li class="menu-item">
-                <a href="{{ url('admin/product') }}" class="menu-link">
-                    <div data-i18n="Without navbar">Nhóm tin tức</div>
-                </a>
-            </li>
-            <li class="menu-item">
-                <a href="{{ url('admin/product') }}" class="menu-link">
-                    <div data-i18n="Without navbar">Tags</div>
-                </a>
-            </li>
-        </ul>
-    </li>
-
-    <!-- Layouts -->
-    <li class="menu-item">
-        <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <i class="menu-icon tf-icons bx bx-layout"></i>
-            <div data-i18n="Layouts">Marketing & CSKH</div>
-        </a>
-
-        <ul class="menu-sub">
-            <li class="menu-item">
-                <a href="layouts-without-menu.html" class="menu-link">
-                    <div data-i18n="Without menu">Tin nhắn</div>
-                </a>
-            </li>
-            <li class="menu-item">
-                <a href="{{ url('admin/product') }}" class="menu-link">
-                    <div data-i18n="Without navbar">Đối tác</div>
-                </a>
-            </li>
-        </ul>
-    </li>
-    <!-- Layouts -->
-    <li class="menu-item">
-        <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <i class="menu-icon tf-icons bx bx-layout"></i>
-            <div data-i18n="Layouts">Bán hàng</div>
-        </a>
-
-        <ul class="menu-sub">
-            <li class="menu-item">
-                <a href="layouts-without-menu.html" class="menu-link">
-                    <div data-i18n="Without menu">Đơn hàng</div>
-                </a>
-            </li>
-            <li class="menu-item">
-                <a href="{{ url('admin/product') }}" class="menu-link">
-                    <div data-i18n="Without navbar">Vận chuyển</div>
-                </a>
-            </li>
-        </ul>
-    </li>
-    <!-- Layouts -->
-    <li class="menu-item">
-        <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <i class="menu-icon tf-icons bx bx-layout"></i>
-            <div data-i18n="Layouts">Báo cáo & Tài chính</div>
-        </a>
-
-        <ul class="menu-sub">
-            <li class="menu-item">
-                <a href="layouts-without-menu.html" class="menu-link">
-                    <div data-i18n="Without menu">Thêm mới</div>
-                </a>
-            </li>
-            <li class="menu-item">
-                <a href="{{ url('admin/product') }}" class="menu-link">
-                    <div data-i18n="Without navbar">Danh sách</div>
-                </a>
-            </li>
-        </ul>
-    </li>
-
-    <li class="menu-item">
-        <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <i class="menu-icon tf-icons bx bx-layout"></i>
-            <div data-i18n="Layouts">Tiện ích</div>
-        </a>
-
-        <ul class="menu-sub">
-            <li class="menu-item">
-                <a href="layouts-without-menu.html" class="menu-link">
-                    <div data-i18n="Without menu">Thêm mới</div>
-                </a>
-            </li>
-            <li class="menu-item">
-                <a href="{{ url('admin/product') }}" class="menu-link">
-                    <div data-i18n="Without navbar">Danh sách</div>
-                </a>
-            </li>
-        </ul>
-    </li>
-    <li class="menu-item">
-        <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <i class="menu-icon tf-icons bx bx-layout"></i>
-            <div data-i18n="Layouts">Hướng dẫn</div>
-        </a>
-
-        <ul class="menu-sub">
-            <li class="menu-item">
-                <a href="layouts-without-menu.html" class="menu-link">
-                    <div data-i18n="Without menu">Thêm mới</div>
-                </a>
-            </li>
-            <li class="menu-item">
-                <a href="{{ url('admin/product') }}" class="menu-link">
-                    <div data-i18n="Without navbar">Danh sách</div>
-                </a>
-            </li>
-        </ul>
-    </li>
-
-    <li class="menu-item">
-        <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <i class="menu-icon tf-icons bx bx-layout"></i>
-            <div data-i18n="Layouts">Cài đặt</div>
-        </a>
-
-        <ul class="menu-sub">
-            <li class="menu-item">
-                <a href="layouts-without-menu.html" class="menu-link">
-                    <div data-i18n="Without menu">Thêm mới</div>
-                </a>
-            </li>
-            <li class="menu-item">
-                <a href="{{ url('admin/product') }}" class="menu-link">
-                    <div data-i18n="Without navbar">Danh sách</div>
-                </a>
-            </li>
-        </ul>
-    </li>
-
-    <!-- Misc -->
-    <li class="menu-header small text-uppercase"><span class="menu-header-text">Misc</span></li>
-    <li class="menu-item">
-        <a href="https://github.com/themeselection/sneat-html-admin-template-free/issues" target="_blank"
-            class="menu-link">
-            <i class="menu-icon tf-icons bx bx-support"></i>
-            <div data-i18n="Support">Support</div>
-        </a>
-    </li>
-</ul>
+    </div>
+</nav>

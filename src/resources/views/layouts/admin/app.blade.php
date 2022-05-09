@@ -1,295 +1,414 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<!-- =========================================================
-* Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
-==============================================================
-
-* Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
-* Created by: ThemeSelection
-* License: You must have a valid license purchased in order to legally use the theme for your project.
-* Copyright ThemeSelection (https://themeselection.com)
-
-=========================================================
- -->
-<!-- beautify ignore:start -->
-<html
-    lang="en"
-    class="light-style layout-menu-fixed"
-    dir="ltr"
-    data-theme="theme-default"
-    data-assets-path="../assets/"
-    data-template="vertical-menu-template-free"
->
 <head>
-    <meta charset="utf-8"/>
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
-    />
-
-    <title>Dashboard - Analytics | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
-
-    <meta name="description" content=""/>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico"/>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-        rel="stylesheet"
-    />
-
-    <!-- Icons. Uncomment required icon fonts -->
-    <link rel="stylesheet" href="{{ asset('admin-theme/assets/vendor/fonts/boxicons.css') }}"/>
-
-    <!-- Core CSS -->
-    <link rel="stylesheet" href="{{ asset('admin-theme/assets/vendor/css/core.css') }}" class="template-customizer-core-css"/>
-    <link rel="stylesheet" href="{{ asset('admin-theme/assets/vendor/css/theme-default.css') }}" class="template-customizer-theme-css"/>
-    <link rel="stylesheet" href="{{ asset('admin-theme/assets/css/demo.css') }}"/>
-
-    <!-- Vendors CSS -->
-    <link rel="stylesheet" href="{{ asset('admin-theme/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}"/>
-
-    <link rel="stylesheet" href="{{ asset('admin-theme/assets/vendor/libs/apex-charts/apex-charts.css') }}"/>
-
-    <!-- Page CSS -->
-
-    <!-- Helpers -->
-    <script src="{{ asset('admin-theme/assets/vendor/js/helpers.js') }}"></script>
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
-    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-    <script src="{{ asset('admin-theme/assets/js/config.js') }}"></script>
+    <title>QTmart.com.vn - Hệ thống điện máy QTmart </title>
+    <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 10]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js') }}"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js') }}"></script>
+      <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="#">
+    <meta name="keywords" content="Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+    <meta name="author" content="#">
+    <!-- Favicon icon -->
+    <link rel="icon" href="libraries\assets\images\favicon.ico" type="image/x-icon">
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('libraries\bower_components\bootstrap\css\bootstrap.min.css') }}">
+    <!-- feather Awesome -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('libraries\assets\icon\feather\css\feather.css') }}">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('libraries\assets\css\style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('libraries\assets\css\jquery.mCustomScrollbar.css') }}">
 </head>
 
 <body>
-<!-- Layout wrapper -->
-<div class="layout-wrapper layout-content-navbar">
-    <div class="layout-container">
-        <!-- Menu -->
-
-        <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
-            <div class="app-brand demo">
-                <a href="index.html" class="app-brand-link">
-              <span class="app-brand-logo demo">
-                <svg
-                    width="25"
-                    viewBox="0 0 25 42"
-                    version="1.1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                >
-                  <defs>
-                    <path
-                        d="M13.7918663,0.358365126 L3.39788168,7.44174259 C0.566865006,9.69408886 -0.379795268,12.4788597 0.557900856,15.7960551 C0.68998853,16.2305145 1.09562888,17.7872135 3.12357076,19.2293357 C3.8146334,19.7207684 5.32369333,20.3834223 7.65075054,21.2172976 L7.59773219,21.2525164 L2.63468769,24.5493413 C0.445452254,26.3002124 0.0884951797,28.5083815 1.56381646,31.1738486 C2.83770406,32.8170431 5.20850219,33.2640127 7.09180128,32.5391577 C8.347334,32.0559211 11.4559176,30.0011079 16.4175519,26.3747182 C18.0338572,24.4997857 18.6973423,22.4544883 18.4080071,20.2388261 C17.963753,17.5346866 16.1776345,15.5799961 13.0496516,14.3747546 L10.9194936,13.4715819 L18.6192054,7.984237 L13.7918663,0.358365126 Z"
-                        id="path-1"
-                    ></path>
-                    <path
-                        d="M5.47320593,6.00457225 C4.05321814,8.216144 4.36334763,10.0722806 6.40359441,11.5729822 C8.61520715,12.571656 10.0999176,13.2171421 10.8577257,13.5094407 L15.5088241,14.433041 L18.6192054,7.984237 C15.5364148,3.11535317 13.9273018,0.573395879 13.7918663,0.358365126 C13.5790555,0.511491653 10.8061687,2.3935607 5.47320593,6.00457225 Z"
-                        id="path-3"
-                    ></path>
-                    <path
-                        d="M7.50063644,21.2294429 L12.3234468,23.3159332 C14.1688022,24.7579751 14.397098,26.4880487 13.008334,28.506154 C11.6195701,30.5242593 10.3099883,31.790241 9.07958868,32.3040991 C5.78142938,33.4346997 4.13234973,34 4.13234973,34 C4.13234973,34 2.75489982,33.0538207 2.37032616e-14,31.1614621 C-0.55822714,27.8186216 -0.55822714,26.0572515 -4.05231404e-15,25.8773518 C0.83734071,25.6075023 2.77988457,22.8248993 3.3049379,22.52991 C3.65497346,22.3332504 5.05353963,21.8997614 7.50063644,21.2294429 Z"
-                        id="path-4"
-                    ></path>
-                    <path
-                        d="M20.6,7.13333333 L25.6,13.8 C26.2627417,14.6836556 26.0836556,15.9372583 25.2,16.6 C24.8538077,16.8596443 24.4327404,17 24,17 L14,17 C12.8954305,17 12,16.1045695 12,15 C12,14.5672596 12.1403557,14.1461923 12.4,13.8 L17.4,7.13333333 C18.0627417,6.24967773 19.3163444,6.07059163 20.2,6.73333333 C20.3516113,6.84704183 20.4862915,6.981722 20.6,7.13333333 Z"
-                        id="path-5"
-                    ></path>
-                  </defs>
-                  <g id="g-app-brand" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                    <g id="Brand-Logo" transform="translate(-27.000000, -15.000000)">
-                      <g id="Icon" transform="translate(27.000000, 15.000000)">
-                        <g id="Mask" transform="translate(0.000000, 8.000000)">
-                          <mask id="mask-2" fill="white">
-                            <use xlink:href="#path-1"></use>
-                          </mask>
-                          <use fill="#696cff" xlink:href="#path-1"></use>
-                          <g id="Path-3" mask="url(#mask-2)">
-                            <use fill="#696cff" xlink:href="#path-3"></use>
-                            <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-3"></use>
-                          </g>
-                          <g id="Path-4" mask="url(#mask-2)">
-                            <use fill="#696cff" xlink:href="#path-4"></use>
-                            <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-4"></use>
-                          </g>
-                        </g>
-                        <g
-                            id="Triangle"
-                            transform="translate(19.000000, 11.000000) rotate(-300.000000) translate(-19.000000, -11.000000) "
-                        >
-                          <use fill="#696cff" xlink:href="#path-5"></use>
-                          <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-5"></use>
-                        </g>
-                      </g>
-                    </g>
-                  </g>
-                </svg>
-              </span>
-                    <span class="app-brand-text demo menu-text fw-bolder ms-2">QTMART</span>
-                </a>
-
-                <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
-                    <i class="bx bx-chevron-left bx-sm align-middle"></i>
-                </a>
+<!-- Pre-loader start -->
+<div class="theme-loader">
+    <div class="ball-scale">
+        <div class='contain'>
+            <div class="ring">
+                <div class="frame"></div>
             </div>
+            <div class="ring">
+                <div class="frame"></div>
+            </div>
+            <div class="ring">
+                <div class="frame"></div>
+            </div>
+            <div class="ring">
+                <div class="frame"></div>
+            </div>
+            <div class="ring">
+                <div class="frame"></div>
+            </div>
+            <div class="ring">
+                <div class="frame"></div>
+            </div>
+            <div class="ring">
+                <div class="frame"></div>
+            </div>
+            <div class="ring">
+                <div class="frame"></div>
+            </div>
+            <div class="ring">
+                <div class="frame"></div>
+            </div>
+            <div class="ring">
+                <div class="frame"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Pre-loader end -->
+<div id="pcoded" class="pcoded">
+    <div class="pcoded-overlay-box"></div>
+    <div class="pcoded-container navbar-wrapper">
 
-            <div class="menu-inner-shadow"></div>
+        <nav class="navbar header-navbar pcoded-header">
+            <div class="navbar-wrapper">
 
-            {{-- Menu --}}
-            @include('layouts.admin.navbar')
-            {{-- End menu --}}
-        </aside>
-        <!-- / Menu -->
-
-        <!-- Layout container -->
-        <div class="layout-page">
-            <!-- Navbar -->
-
-            <nav
-                class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
-                id="layout-navbar"
-            >
-                <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
-                    <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
-                        <i class="bx bx-menu bx-sm"></i>
+                <div class="navbar-logo">
+                    <a class="mobile-menu" id="mobile-collapse" href="#!">
+                        <i class="feather icon-menu"></i>
+                    </a>
+                    <a href="/" style="font-size:20px">
+                        QTMART
+                    </a>
+                    <a class="mobile-options">
+                        <i class="feather icon-more-horizontal"></i>
                     </a>
                 </div>
 
-                <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-                    <!-- Search -->
-                    <div class="navbar-nav align-items-center">
-                        <div class="nav-item d-flex align-items-center">
-                            <i class="bx bx-search fs-4 lh-0"></i>
-                            <input
-                                type="text"
-                                class="form-control border-0 shadow-none"
-                                placeholder="Search..."
-                                aria-label="Search..."
-                            />
-                        </div>
-                    </div>
-                    <!-- /Search -->
-
-                    <ul class="navbar-nav flex-row align-items-center ms-auto">
-                        <!-- Place this tag where you want the button to render. -->
-                        <li class="nav-item lh-1 me-3">
-                            <a
-                                class="github-button"
-                                href="https://github.com/themeselection/sneat-html-admin-template-free"
-                                data-icon="octicon-star"
-                                data-size="large"
-                                data-show-count="true"
-                                aria-label="Star themeselection/sneat-html-admin-template-free on GitHub"
-                            >Star</a
-                            >
-                        </li>
-
-                        <!-- User -->
-                        <li class="nav-item navbar-dropdown dropdown-user dropdown">
-                            <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
-                               data-bs-toggle="dropdown">
-                                <div class="avatar avatar-online">
-                                    <img src="{{ asset('admin-theme/assets/img/avatars/1.png') }}" alt class="w-px-40 h-auto rounded-circle"/>
+                <div class="navbar-container container-fluid">
+                    <ul class="nav-left">
+                        <li class="header-search">
+                            <div class="main-search morphsearch-search">
+                                <div class="input-group">
+                                    <span class="input-group-addon search-close"><i class="feather icon-x"></i></span>
+                                    <input type="text" class="form-control">
+                                    <span class="input-group-addon search-btn"><i class="feather icon-search"></i></span>
                                 </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#!" onclick="javascript:toggleFullScreen()">
+                                <i class="feather icon-maximize full-screen"></i>
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li>
-                                    <a class="dropdown-item" href="#">
-                                        <div class="d-flex">
-                                            <div class="flex-shrink-0 me-3">
-                                                <div class="avatar avatar-online">
-                                                    <img src="{{ asset('admin-theme/assets/img/avatars/1.png') }}" alt
-                                                         class="w-px-40 h-auto rounded-circle"/>
-                                                </div>
-                                            </div>
-                                            <div class="flex-grow-1">
-                                                <span class="fw-semibold d-block">John Doe</span>
-                                                <small class="text-muted">Admin</small>
+                        </li>
+                    </ul>
+                    <ul class="nav-right">
+                        <li class="header-notification">
+                            <div class="dropdown-primary dropdown">
+                                <div class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="feather icon-bell"></i>
+                                    <span class="badge bg-c-pink">5</span>
+                                </div>
+                                <ul class="show-notification notification-view dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                    <li>
+                                        <h6>Notifications</h6>
+                                        <label class="label label-danger">New</label>
+                                    </li>
+                                    <li>
+                                        <div class="media">
+                                            <img class="d-flex align-self-center img-radius" src="{{ asset('libraries\assets\images\avatar-4.jpg')}}" alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <h5 class="notification-user">John Doe</h5>
+                                                <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                                                <span class="notification-time">30 minutes ago</span>
                                             </div>
                                         </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <div class="dropdown-divider"></div>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">
-                                        <i class="bx bx-user me-2"></i>
-                                        <span class="align-middle">My Profile</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">
-                                        <i class="bx bx-cog me-2"></i>
-                                        <span class="align-middle">Settings</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">
-                        <span class="d-flex align-items-center align-middle">
-                          <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
-                          <span class="flex-grow-1 align-middle">Billing</span>
-                          <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
-                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <div class="dropdown-divider"></div>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="auth-login-basic.html">
-                                        <i class="bx bx-power-off me-2"></i>
-                                        <span class="align-middle">Log Out</span>
-                                    </a>
-                                </li>
-                            </ul>
+                                    </li>
+                                    <li>
+                                        <div class="media">
+                                            <img class="d-flex align-self-center img-radius" src="{{ asset('libraries\assets\images\avatar-3.jpg')}}" alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <h5 class="notification-user">Joseph William</h5>
+                                                <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                                                <span class="notification-time">30 minutes ago</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="media">
+                                            <img class="d-flex align-self-center img-radius" src="{{ asset('libraries\assets\images\avatar-4.jpg')}}" alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <h5 class="notification-user">Sara Soudein</h5>
+                                                <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                                                <span class="notification-time">30 minutes ago</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
-                        <!--/ User -->
+                        <li class="header-notification">
+                            <div class="dropdown-primary dropdown">
+                                <div class="displayChatbox dropdown-toggle" data-toggle="dropdown">
+                                    <i class="feather icon-message-square"></i>
+                                    <span class="badge bg-c-green">3</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="user-profile header-notification">
+                            <div class="dropdown-primary dropdown">
+                                <div class="dropdown-toggle" data-toggle="dropdown">
+                                    <img src="{{ asset('libraries\assets\images\avatar-4.jpg')}}" class="img-radius" alt="User-Profile-Image">
+                                    <span>John Doe</span>
+                                    <i class="feather icon-chevron-down"></i>
+                                </div>
+                                <ul class="show-notification profile-notification dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                    <li>
+                                        <a href="#!">
+                                            <i class="feather icon-settings"></i> Settings
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="user-profile.htm">
+                                            <i class="feather icon-user"></i> Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="email-inbox.htm">
+                                            <i class="feather icon-mail"></i> My Messages
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="auth-lock-screen.htm">
+                                            <i class="feather icon-lock"></i> Lock Screen
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <form method="POST" action="{{ route('logout') }}">
+                                            @csrf
+                                            <button type="submit">
+                                                <i class="feather icon-log-out"></i> Logout
+                                            </button>
+                                        </form>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </li>
                     </ul>
                 </div>
+            </div>
+        </nav>
 
-            </nav>
-
-            <!-- / Navbar -->
-
-            <!-- Content wrapper -->
-            <div class="content-wrapper">
-                @yield('content')
+        <!-- Sidebar chat start -->
+        <div id="sidebar" class="users p-chat-user showChat">
+            <div class="had-container">
+                <div class="card card_main p-fixed users-main">
+                    <div class="user-box">
+                        <div class="chat-inner-header">
+                            <div class="back_chatBox">
+                                <div class="right-icon-control">
+                                    <input type="text" class="form-control  search-text" placeholder="Search Friend" id="search-friends">
+                                    <div class="form-icon">
+                                        <i class="icofont icofont-search"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-friend-list">
+                            <div class="media userlist-box" data-id="1" data-status="online" data-username="Josephin Doe" data-toggle="tooltip" data-placement="left" title="Josephin Doe">
+                                <a class="media-left" href="#!">
+                                    <img class="media-object img-radius img-radius" src="{{ asset('libraries\assets\images\avatar-3.jpg')}}" alt="Generic placeholder image ">
+                                    <div class="live-status bg-success"></div>
+                                </a>
+                                <div class="media-body">
+                                    <div class="f-13 chat-header">Josephin Doe</div>
+                                </div>
+                            </div>
+                            <div class="media userlist-box" data-id="2" data-status="online" data-username="Lary Doe" data-toggle="tooltip" data-placement="left" title="Lary Doe">
+                                <a class="media-left" href="#!">
+                                    <img class="media-object img-radius" src="{{ asset('libraries\assets\images\avatar-2.jpg')}}" alt="Generic placeholder image">
+                                    <div class="live-status bg-success"></div>
+                                </a>
+                                <div class="media-body">
+                                    <div class="f-13 chat-header">Lary Doe</div>
+                                </div>
+                            </div>
+                            <div class="media userlist-box" data-id="3" data-status="online" data-username="Alice" data-toggle="tooltip" data-placement="left" title="Alice">
+                                <a class="media-left" href="#!">
+                                    <img class="media-object img-radius" src="{{ asset('libraries\assets\images\avatar-4.jpg')}}" alt="Generic placeholder image">
+                                    <div class="live-status bg-success"></div>
+                                </a>
+                                <div class="media-body">
+                                    <div class="f-13 chat-header">Alice</div>
+                                </div>
+                            </div>
+                            <div class="media userlist-box" data-id="4" data-status="online" data-username="Alia" data-toggle="tooltip" data-placement="left" title="Alia">
+                                <a class="media-left" href="#!">
+                                    <img class="media-object img-radius" src="{{ asset('libraries\assets\images\avatar-3.jpg')}}" alt="Generic placeholder image">
+                                    <div class="live-status bg-success"></div>
+                                </a>
+                                <div class="media-body">
+                                    <div class="f-13 chat-header">Alia</div>
+                                </div>
+                            </div>
+                            <div class="media userlist-box" data-id="5" data-status="online" data-username="Suzen" data-toggle="tooltip" data-placement="left" title="Suzen">
+                                <a class="media-left" href="#!">
+                                    <img class="media-object img-radius" src="{{ asset('libraries\assets\images\avatar-2.jpg')}}" alt="Generic placeholder image">
+                                    <div class="live-status bg-success"></div>
+                                </a>
+                                <div class="media-body">
+                                    <div class="f-13 chat-header">Suzen</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- / Layout page -->
+        <!-- Sidebar inner chat start-->
+        <div class="showChat_inner">
+            <div class="media chat-inner-header">
+                <a class="back_chatBox">
+                    <i class="feather icon-chevron-left"></i> Josephin Doe
+                </a>
+            </div>
+            <div class="media chat-messages">
+                <a class="media-left photo-table" href="#!">
+                    <img class="media-object img-radius img-radius m-t-5" src="{{ asset('libraries\assets\images\avatar-3.jpg')}}" alt="Generic placeholder image">
+                </a>
+                <div class="media-body chat-menu-content">
+                    <div class="">
+                        <p class="chat-cont">I'm just looking around. Will you tell me something about yourself?</p>
+                        <p class="chat-time">8:20 a.m.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="media chat-messages">
+                <div class="media-body chat-menu-reply">
+                    <div class="">
+                        <p class="chat-cont">I'm just looking around. Will you tell me something about yourself?</p>
+                        <p class="chat-time">8:20 a.m.</p>
+                    </div>
+                </div>
+                <div class="media-right photo-table">
+                    <a href="#!">
+                        <img class="media-object img-radius img-radius m-t-5" src="{{ asset('libraries\assets\images\avatar-4.jpg')}}" alt="Generic placeholder image">
+                    </a>
+                </div>
+            </div>
+            <div class="chat-reply-box p-b-20">
+                <div class="right-icon-control">
+                    <input type="text" class="form-control search-text" placeholder="Share Your Thoughts">
+                    <div class="form-icon">
+                        <i class="feather icon-navigation"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sidebar inner chat end-->
+        <div class="pcoded-main-container">
+            <div class="pcoded-wrapper">
+                @include('layouts.admin.navbar')
+                <div class="pcoded-content">
+                    <div class="pcoded-inner-content">
+                        <div class="main-body">
+{{--                            <div class="page-wrapper">--}}
+{{--                                <div class="page-body">--}}
+                                    @yield('content')
+{{--                                </div>--}}
+{{--                            </div>--}}
+
+                            <div id="styleSelector">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <!-- Overlay -->
-    <div class="layout-overlay layout-menu-toggle"></div>
 </div>
-<!-- / Layout wrapper -->
 
-<!-- Core JS -->
-<!-- build:js assets/vendor/js/core.js -->
-<script src="{{ asset('admin-theme/assets/vendor/libs/jquery/jquery.js') }}"></script>
-<script src="{{ asset('admin-theme/assets/vendor/libs/popper/popper.js') }}"></script>
-<script src="{{ asset('admin-theme/assets/vendor/js/bootstrap.js') }}"></script>
-<script src="{{ asset('admin-theme/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js') }}"></script>
+<!-- Warning Section Starts -->
+<!-- Older IE warning message -->
+<!--[if lt IE 10]>
+<div class="ie-warning">
+<h1>Warning!!</h1>
+<p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+<div class="iew-container">
+    <ul class="iew-download">
+        <li>
+            <a href="http://www.google.com/chrome/">
+                <img src="../files/assets/images/browser/chrome.png" alt="Chrome">
+                <div>Chrome</div>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.mozilla.org/en-US/firefox/new/">
+                <img src="../files/assets/images/browser/firefox.png" alt="Firefox">
+                <div>Firefox</div>
+            </a>
+        </li>
+        <li>
+            <a href="http://www.opera.com">
+                <img src="../files/assets/images/browser/opera.png" alt="Opera">
+                <div>Opera</div>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.apple.com/safari/">
+                <img src="../files/assets/images/browser/safari.png" alt="Safari">
+                <div>Safari</div>
+            </a>
+        </li>
+        <li>
+            <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                <img src="../files/assets/images/browser/ie.png" alt="">
+                <div>IE (9 & above)</div>
+            </a>
+        </li>
+    </ul>
+</div>
+<p>Sorry for the inconvenience!</p>
+</div>
+@yield('js')
+<![endif]-->
+<!-- Warning Section Ends -->
+<!-- Required Jquery -->
+<script data-cfasync="false" src="..\..\..\cdn-cgi\scripts\5c5dd728\cloudflare-static\email-decode.min.js"></script>
+<script type="text/javascript" src="{{ asset('libraries\bower_components\jquery\js\jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('libraries\bower_components\jquery-ui\js\jquery-ui.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('libraries\bower_components\popper.js\js\popper.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('libraries\bower_components\bootstrap\js\bootstrap.min.js') }}"></script>
+<!-- jquery slimscroll js -->
+<script type="text/javascript" src="{{ asset('libraries\bower_components\jquery-slimscroll\js\jquery.slimscroll.js') }}"></script>page-body
+<!-- modernizr js -->
+<script type="text/javascript" src="{{ asset('libraries\bower_components\modernizr\js\modernizr.js') }}"></script>
+<!-- Chart js -->
+<script type="text/javascript" src="{{ asset('libraries\bower_components\chart.js\js\Chart.js') }}"></script>
+<!-- amchart js -->
+<script src="{{ asset('libraries\assets\pages\widget\amchart\amcharts.js') }}"></script>
+<script src="{{ asset('libraries\assets\pages\widget\amchart\serial.js') }}"></script>
+<script src="{{ asset('libraries\assets\pages\widget\amchart\light.js') }}"></script>
+<script src="{{ asset('libraries\assets\js\jquery.mCustomScrollbar.concat.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('libraries\assets\js\SmoothScroll.js') }}"></script>
+<script src="{{ asset('libraries\assets\js\pcoded.min.js') }}"></script>
+<!-- custom js -->
+<script src="{{ asset('libraries\assets\js\vartical-layout.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('libraries\assets\pages\dashboard\custom-dashboard.js') }}"></script>
+<script type="text/javascript" src="{{ asset('libraries\assets\js\script.min.js') }}"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-<script src="{{ asset('admin-theme/assets/vendor/js/menu.js') }}"></script>
-<!-- endbuild -->
-
-<!-- Vendors JS -->
-<script src="{{ asset('admin-theme/assets/vendor/libs/apex-charts/apexcharts.js') }}"></script>
-
-<!-- Main JS -->
-<script src="{{ asset('admin-theme/assets/js/main.js') }}"></script>
-
-<!-- Page JS -->
-<script src="{{ asset('admin-theme/assets/js/dashboards-analytics.js') }}"></script>
-
-<!-- Place this tag in your head or just before your close body tag. -->
-<script async defer src="https://buttons.github.io/buttons.js"></script>
+    gtag('config', 'UA-23581568-13');
+</script>
 </body>
+
 </html>

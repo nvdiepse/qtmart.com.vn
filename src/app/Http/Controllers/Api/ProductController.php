@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Exceptions\NotFoundException;
+use App\Http\Controllers\Client\BaseController;
 use App\Http\Controllers\Controller;
 use App\Services\ProductService;
 use Illuminate\Http\JsonResponse;
@@ -14,7 +15,7 @@ use Symfony\Component\HttpFoundation\Response;
 /**
  *
  */
-class ProductController extends Controller
+class ProductController extends BaseController
 {
 
     /**
@@ -32,6 +33,20 @@ class ProductController extends Controller
         $this->productService = $productService;
     }
 
+    public function getAll($limit, $offset)
+    {
+        try {
+            $data = $this->productService->getAll($limit, $offset);
+            return $this->response(Response::HTTP_OK, Response::$statusTexts[Response::HTTP_OK], $data);
+        } catch (Exception $e) {
+            report($e);
+            return $this->response(
+                Response::HTTP_INTERNAL_SERVER_ERROR,
+                Response::$statusTexts[Response::HTTP_INTERNAL_SERVER_ERROR]
+            );
+        }
+    }
+
     /**
      * @throws NotFoundException
      */
@@ -39,11 +54,7 @@ class ProductController extends Controller
     {
         try {
             $id = request('id');
-
             $product = $this->productService->findById($id);
-            if (!$product) {
-                throw new NotFoundException('Product id = ' . $id . 'not found');
-            }
 
             return $this->response(
                 Response::HTTP_OK,

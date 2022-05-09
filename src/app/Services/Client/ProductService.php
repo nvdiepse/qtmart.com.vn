@@ -34,10 +34,24 @@ class ProductService
         return $this->productRepository->find($id);
     }
 
-
     public function getDealsOfTheWeek()
     {
         return $this->productRepository->getDealsOfTheWeek();
+    }
+
+    public function getHotBestSellers()
+    {
+        return $this->productRepository->getHotBestSellers();
+    }
+
+    public function getHotNewArrivals()
+    {
+        return $this->productRepository->getHotNewArrivals();
+    }
+
+    public function findBySlug($slug)
+    {
+        return $this->productRepository->findBySlug($slug);
     }
 
     public function getAll($orderBy, $offset)

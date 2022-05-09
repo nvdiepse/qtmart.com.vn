@@ -2,6 +2,7 @@
 
 namespace App\Services\Client;
 
+use App\Repositories\SliderRepository;
 
 /**
  *
@@ -9,46 +10,16 @@ namespace App\Services\Client;
 class SliderService
 {
 
-    /**
-     * @var ProductRepository
-     */
-    private $productRepository;
+    protected $sliderRepository;
 
-    /**
-     * @param ProductRepository $productRepository
-     */
     public function __construct(
-        ProductRepository $productRepository
-    )
-    {
-        $this->productRepository = $productRepository;
+        SliderRepository $sliderRepository
+    ) {
+        $this->sliderRepository = $sliderRepository;
     }
 
-    /**
-     * @param $id
-     * @return mixed
-     */
-    public function findById($id)
+    public function getAll()
     {
-        return $this->productRepository->find($id);
-    }
-
-
-    public function getDealsOfTheWeek()
-    {
-        return $this->productRepository->getDealsOfTheWeek();
-    }
-
-    public function getAll($orderBy, $offset)
-    {
-        return $this->productRepository->getPaginate($orderBy, $offset);
-    }
-
-    /**
-     *
-     */
-    public function search($options)
-    {
-        $this->productRepository->getAll();
+        return $this->sliderRepository->getAll();
     }
 }

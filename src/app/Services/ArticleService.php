@@ -52,4 +52,9 @@ class ArticleService
     {
         return $this->articleRepository->getAll($orderBy, $limit);
     }
+
+    public function delete($id)
+    {
+        return $this->articleRepository->delete($id);
+    }
 }

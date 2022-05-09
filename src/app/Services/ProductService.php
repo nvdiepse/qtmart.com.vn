@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\Repositories\ArticleRepository;
+use App\Repositories\ProductRepository;
 
 /**
  *
@@ -11,15 +11,15 @@ class ProductService
 {
 
     /**
-     * @var ArticleRepository
+     * @var ProductRepository
      */
     private $productRepository;
 
     /**
-     * @param ArticleRepository $productRepository
+     * @param ProductRepository $productRepository
      */
     public function __construct(
-        ArticleRepository $productRepository
+        ProductRepository $productRepository
     )
     {
         $this->productRepository = $productRepository;
@@ -31,7 +31,7 @@ class ProductService
      */
     public function findById($id)
     {
-        return $this->productRepository->find($id);
+        return $this->productRepository->findOne($id);
     }
 
     /**
@@ -59,5 +59,15 @@ class ProductService
     public function search($options)
     {
         $this->productRepository->getAll();
+    }
+
+    public function delete($id)
+    {
+        $this->productRepository->delete($id);
+    }
+
+    public function getAll($limit, $offset)
+    {
+        return $this->productRepository->getAll($limit, $offset);
     }
 }
