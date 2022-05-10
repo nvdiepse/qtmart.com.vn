@@ -1,7 +1,6 @@
 @extends('layouts.admin.app')
 
 @section('content')
-
     <div id="producCreate">
         <br>
         <div class="row">
@@ -37,7 +36,8 @@
                                                 <div class="f-20">
                                                     <i class="icofont icofont-edit"></i>
                                                 </div>
-                                                Thông tin sản phẩm</a>
+                                                Thông tin sản phẩm
+                                            </a>
                                             <div class="slide"></div>
                                         </li>
                                         <li class="nav-item">
@@ -45,7 +45,8 @@
                                                 <div class="f-20">
                                                     <i class="icofont icofont-document-search"></i>
                                                 </div>
-                                                SEO Metadata</a>
+                                                SEO Metadata
+                                            </a>
                                             <div class="slide"></div>
                                         </li>
                                         <li class="nav-item">
@@ -53,7 +54,8 @@
                                                 <div class="f-20">
                                                     <i class="icofont icofont-ui-image"></i>
                                                 </div>
-                                                Thuộc tính sản phẩm</a>
+                                                Thuộc tính sản phẩm
+                                            </a>
                                             <div class="slide"></div>
                                         </li>
                                     </ul>
@@ -73,7 +75,8 @@
                                                         <div class="form-group row">
                                                             <label class="col-sm-2 col-form-label">Mã sản phẩm</label>
                                                             <div class="col-sm-10">
-                                                                <input type="text" class="form-control" placeholder="Tự động tạo mã">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Tự động tạo mã">
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
@@ -94,7 +97,8 @@
                                                         <div class="form-group row">
                                                             <label class="col-sm-2 col-form-label">Đơn vị tính</label>
                                                             <div class="col-sm-10">
-                                                                <input type="text" class="form-control" placeholder="Vd: Cái, Chiếc, Lọ ...">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Vd: Cái, Chiếc, Lọ ...">
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
@@ -113,12 +117,16 @@
                                                         <div class="col-sm-10">
                                                             <div class="form-check form-check-inline">
                                                                 <label class="form-check-label">
-                                                                    <input class="form-check-input" type="radio" name="gender" id="gender-1" value="option1"> Hoạt động
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="gender" id="gender-1" value="option1"> Hoạt
+                                                                    động
                                                                 </label>
                                                             </div>
                                                             <div class="form-check form-check-inline">
                                                                 <label class="form-check-label">
-                                                                    <input class="form-check-input" type="radio" name="gender" id="gender-2" value="option2"> Không hoạt động
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="gender" id="gender-2" value="option2"> Không
+                                                                    hoạt động
                                                                 </label>
                                                             </div>
                                                             <span class="messages"></span>
@@ -127,9 +135,15 @@
                                                     <div class="form-group row">
                                                         <label class="col-sm-2 col-form-label">Ảnh sản phẩm</label>
                                                         <div class="col-sm-10">
-                                                            <input type="file" name="files[]" id="filer_input1" multiple="multiple">
+                                                            <input type="file" name="files[]" id="filer_input1"
+                                                                multiple="multiple">
                                                         </div>
                                                     </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <textarea class="form-control" id="summary-ckeditor" name="summary-ckeditor"></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -138,36 +152,44 @@
                                                 <div class="row">
                                                     <div class="col-sm-6">
                                                         <div class="input-group">
-                                                            <span class="input-group-addon"><i class="icofont icofont-all-caps"></i></span>
+                                                            <span class="input-group-addon"><i
+                                                                    class="icofont icofont-all-caps"></i></span>
                                                             <input type="text" class="form-control" placeholder="Title">
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-6">
                                                         <div class="input-group">
-                                                            <span class="input-group-addon"><i class="icofont icofont-underline"></i></span>
-                                                            <input type="text" class="form-control" placeholder="Label Name">
+                                                            <span class="input-group-addon"><i
+                                                                    class="icofont icofont-underline"></i></span>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Label Name">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-sm-6">
                                                         <div class="input-group">
-                                                            <span class="input-group-addon"><i class="icofont icofont-ui-keyboard"></i></span>
+                                                            <span class="input-group-addon"><i
+                                                                    class="icofont icofont-ui-keyboard"></i></span>
                                                             <input type="text" class="form-control" placeholder="Keyword">
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-6">
                                                         <div class="input-group">
-                                                            <span class="input-group-addon"><i class="icofont icofont-copy-alt"></i></span>
-                                                            <input type="text" class="form-control" placeholder="Description">
+                                                            <span class="input-group-addon"><i
+                                                                    class="icofont icofont-copy-alt"></i></span>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Description">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-sm-12">
                                                         <div class="text-center m-t-20">
-                                                            <button type="button" class="btn btn-primary waves-effect waves-light m-r-10">Save</button>
-                                                            <button type="button" class="btn btn-warning waves-effect waves-light">Discard</button>
+                                                            <button type="button"
+                                                                class="btn btn-primary waves-effect waves-light m-r-10">Save</button>
+                                                            <button type="button"
+                                                                class="btn btn-warning waves-effect waves-light">Discard</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -178,40 +200,51 @@
                                                 <div class="row p-t-10 p-b-10">
                                                     <div class="col-lg-3 col-md-6 col-sm-12">
                                                         <a href="">
-                                                            <img src="libraries\assets\images\product-edit\product-edit1.jpg" class="img-fluid width-100 m-b-20" alt="img-edit">
+                                                            <img src="libraries\assets\images\product-edit\product-edit1.jpg"
+                                                                class="img-fluid width-100 m-b-20" alt="img-edit">
                                                         </a>
                                                     </div>
                                                     <div class="col-lg-9 col-md-6 col-sm-12">
                                                         <div class="row">
                                                             <div class="col-sm-12">
                                                                 <div class="input-group">
-                                                                    <span class="input-group-addon"><i class="icofont icofont-all-caps"></i></span>
-                                                                    <input type="text" class="form-control" placeholder="Label Name">
+                                                                    <span class="input-group-addon"><i
+                                                                            class="icofont icofont-all-caps"></i></span>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="Label Name">
                                                                 </div>
                                                                 <div class="col-xs-6 edit-left">
                                                                     <div class="form-radio">
                                                                         <form>
                                                                             <div class="radio radiofill">
                                                                                 <label>
-                                                                                    <input type="radio" name="radio"><i class="helper"></i>Largest Image
+                                                                                    <input type="radio" name="radio"><i
+                                                                                        class="helper"></i>Largest
+                                                                                    Image
                                                                                 </label>
                                                                             </div>
                                                                             <div class="radio radiofill">
                                                                                 <label>
-                                                                                    <input type="radio" name="radio"><i class="helper"></i>Medium Image
+                                                                                    <input type="radio" name="radio"><i
+                                                                                        class="helper"></i>Medium
+                                                                                    Image
                                                                                 </label>
                                                                             </div>
                                                                             <div class="radio radiofill">
                                                                                 <label>
-                                                                                    <input type="radio" name="radio"><i class="helper"></i>Small Image
+                                                                                    <input type="radio" name="radio"><i
+                                                                                        class="helper"></i>Small
+                                                                                    Image
                                                                                 </label>
                                                                             </div>
                                                                         </form>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-xs-6 edit-right text-right">
-                                                                    <button type="button" class="btn btn-danger waves-effect waves-light">Remove
-                                                                        <i class="icofont icofont-close-circled f-16 m-l-5"></i>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger waves-effect waves-light">Remove
+                                                                        <i
+                                                                            class="icofont icofont-close-circled f-16 m-l-5"></i>
                                                                     </button>
                                                                 </div>
                                                             </div>
@@ -222,40 +255,51 @@
                                                 <div class="row p-t-10 p-b-10">
                                                     <div class="col-lg-3 col-md-6 col-sm-12">
                                                         <a href="">
-                                                            <img src="libraries\assets\images\product-edit\product-edit2.jpg" class="img-fluid width-100 m-b-20" alt="img-edit">
+                                                            <img src="libraries\assets\images\product-edit\product-edit2.jpg"
+                                                                class="img-fluid width-100 m-b-20" alt="img-edit">
                                                         </a>
                                                     </div>
                                                     <div class="col-lg-9 col-md-6 col-sm-12">
                                                         <div class="row">
                                                             <div class="col-sm-12">
                                                                 <div class="input-group">
-                                                                    <span class="input-group-addon"><i class="icofont icofont-all-caps"></i></span>
-                                                                    <input type="text" class="form-control" placeholder="Label Name">
+                                                                    <span class="input-group-addon"><i
+                                                                            class="icofont icofont-all-caps"></i></span>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="Label Name">
                                                                 </div>
                                                                 <div class="col-xs-6 edit-left">
                                                                     <div class="form-radio">
                                                                         <form>
                                                                             <div class="radio radiofill">
                                                                                 <label>
-                                                                                    <input type="radio" name="radio"><i class="helper"></i>Largest Image
+                                                                                    <input type="radio" name="radio"><i
+                                                                                        class="helper"></i>Largest
+                                                                                    Image
                                                                                 </label>
                                                                             </div>
                                                                             <div class="radio radiofill">
                                                                                 <label>
-                                                                                    <input type="radio" name="radio"><i class="helper"></i>Medium Image
+                                                                                    <input type="radio" name="radio"><i
+                                                                                        class="helper"></i>Medium
+                                                                                    Image
                                                                                 </label>
                                                                             </div>
                                                                             <div class="radio radiofill">
                                                                                 <label>
-                                                                                    <input type="radio" name="radio"><i class="helper"></i>Small Image
+                                                                                    <input type="radio" name="radio"><i
+                                                                                        class="helper"></i>Small
+                                                                                    Image
                                                                                 </label>
                                                                             </div>
                                                                         </form>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-xs-6 edit-right text-right">
-                                                                    <button type="button" class="btn btn-danger waves-effect waves-light">Remove
-                                                                        <i class="icofont icofont-close-circled f-16 m-l-5"></i>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger waves-effect waves-light">Remove
+                                                                        <i
+                                                                            class="icofont icofont-close-circled f-16 m-l-5"></i>
                                                                     </button>
                                                                 </div>
                                                             </div>
@@ -266,40 +310,51 @@
                                                 <div class="row p-t-10">
                                                     <div class="col-lg-3 col-md-6 col-sm-12">
                                                         <a href="">
-                                                            <img src="libraries\assets\images\product-edit\product-edit3.jpg" class="img-fluid width-100 m-b-20" alt="img-edit">
+                                                            <img src="libraries\assets\images\product-edit\product-edit3.jpg"
+                                                                class="img-fluid width-100 m-b-20" alt="img-edit">
                                                         </a>
                                                     </div>
                                                     <div class="col-lg-9 col-md-6 col-sm-12">
                                                         <div class="row">
                                                             <div class="col-sm-12">
                                                                 <div class="input-group">
-                                                                    <span class="input-group-addon"><i class="icofont icofont-all-caps"></i></span>
-                                                                    <input type="text" class="form-control" placeholder="Label Name">
+                                                                    <span class="input-group-addon"><i
+                                                                            class="icofont icofont-all-caps"></i></span>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="Label Name">
                                                                 </div>
                                                                 <div class="col-xs-6 edit-left">
                                                                     <div class="form-radio">
                                                                         <form>
                                                                             <div class="radio radiofill">
                                                                                 <label>
-                                                                                    <input type="radio" name="radio"><i class="helper"></i>Largest Image
+                                                                                    <input type="radio" name="radio"><i
+                                                                                        class="helper"></i>Largest
+                                                                                    Image
                                                                                 </label>
                                                                             </div>
                                                                             <div class="radio radiofill">
                                                                                 <label>
-                                                                                    <input type="radio" name="radio"><i class="helper"></i>Medium Image
+                                                                                    <input type="radio" name="radio"><i
+                                                                                        class="helper"></i>Medium
+                                                                                    Image
                                                                                 </label>
                                                                             </div>
                                                                             <div class="radio radiofill">
                                                                                 <label>
-                                                                                    <input type="radio" name="radio"><i class="helper"></i>Small Image
+                                                                                    <input type="radio" name="radio"><i
+                                                                                        class="helper"></i>Small
+                                                                                    Image
                                                                                 </label>
                                                                             </div>
                                                                         </form>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-xs-6 edit-right text-right">
-                                                                    <button type="button" class="btn btn-danger waves-effect waves-light">Remove
-                                                                        <i class="icofont icofont-close-circled f-16 m-l-5"></i>
+                                                                    <button type="button"
+                                                                        class="btn btn-danger waves-effect waves-light">Remove
+                                                                        <i
+                                                                            class="icofont icofont-close-circled f-16 m-l-5"></i>
                                                                     </button>
                                                                 </div>
                                                             </div>
@@ -313,6 +368,9 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="row">
+
+                        </div>
                     </div>
                 </div>
                 <!-- Product edit card end -->
@@ -325,6 +383,15 @@
 @endsection
 
 @section('js')
-    <script src="{{ asset('libraries\assets\pages\filer\jquery.fileuploads.init.js')}}" type="text/javascript"></script>
+    <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+
+    <script>
+        CKEDITOR.replace('summary-ckeditor', {
+            filebrowserUploadUrl: "{{ route('ckeditor.upload', ['_token' => csrf_token()]) }}",
+            filebrowserUploadMethod: 'form'
+        });
+    </script>
+
+    <script src="{{ asset('libraries\assets\pages\filer\jquery.fileuploads.init.js') }}" type="text/javascript"></script>
     <script type="text/javascript" src="{{ mix('js/admin/product/create.js') }}"></script>
 @endsection

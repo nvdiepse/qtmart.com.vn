@@ -38,8 +38,13 @@ Route::group(['prefix' => 'admin'], function () {
     });
 
     Route::group(['prefix' => 'order'], function () {
+        Route::get('/', 'Admin\OrderController@index');
+        Route::get('/detail/{id}', 'Admin\OrderController@detailById');
     });
 
     Route::group(['prefix' => 'report'], function () {
     });
+
+    Route::get('ckeditor', 'Admin\CkeditorController@index');
+    Route::post('ckeditor/upload', 'Admin\CkeditorController@upload')->name('ckeditor.upload');
 });

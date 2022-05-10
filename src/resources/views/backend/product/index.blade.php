@@ -1,6 +1,37 @@
 @extends('layouts.admin.app')
 
 @section('content')
+    <div class="card">
+        <div class="">
+            <a class="nav-link active" data-toggle="tab" href="#home7" role="tab">
+                <div class="f-20">
+                    <i class="icofont icofont-edit"></i>
+                </div>
+                Thông tin sản phẩm
+            </a>
+            <div class="slide"></div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header-breadcrumb">
+                <ul class="breadcrumb-title">
+                    <li class="breadcrumb-item">
+                        <a href="index-1.htm"> <i class="feather icon-home"></i> </a>
+                    </li>
+                    <li class="breadcrumb-item"><a href="#!">Sản phẩm</a>
+                    </li>
+                    <li class="breadcrumb-item"><a href="#!">Tạo mới sản phẩm</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br>
+
     <div id="productIndex">
         <div class="container-xxl flex-grow-1 container-p-y">
             <div class="card">
@@ -19,11 +50,13 @@
                                             <option value="50">50</option>
                                             <option value="100">100</option>
                                         </select></label></div>
-                                <div class="dt-action-buttons text-xl-end text-lg-start text-md-end text-start mt-md-0 mt-3">
+                                <div
+                                    class="dt-action-buttons text-xl-end text-lg-start text-md-end text-start mt-md-0 mt-3">
                                     <div class="dt-buttons">
                                         <button class="dt-button btn btn-primary" tabindex="0"
                                             aria-controls="DataTables_Table_0" type="button"><span><i
-                                                    class="bx bx-plus me-md-2"></i><span class="d-md-inline-block d-none">Create
+                                                    class="bx bx-plus me-md-2"></i><span
+                                                    class="d-md-inline-block d-none">Create
                                                     Invoice</span></span></button>
                                     </div>
                                 </div>
@@ -52,9 +85,9 @@
                                     <th class="control sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
                                         colspan="1" style="width: 0px; display: none;"
                                         aria-label=": activate to sort column ascending"></th>
-                                    <th class="sorting sorting_desc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
-                                        colspan="1" style="width: 97px;" aria-label="#ID: activate to sort column ascending"
-                                        aria-sort="descending">#ID</th>
+                                    <th class="sorting sorting_desc" tabindex="0" aria-controls="DataTables_Table_0"
+                                        rowspan="1" colspan="1" style="width: 97px;"
+                                        aria-label="#ID: activate to sort column ascending" aria-sort="descending">#ID</th>
                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
                                         colspan="1" style="width: 69px;" aria-label=": activate to sort column ascending"><i
                                             class="bx bx-trending-up"></i></th>
@@ -62,7 +95,8 @@
                                         colspan="1" style="width: 367px;"
                                         aria-label="Client: activate to sort column ascending">Client</th>
                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
-                                        colspan="1" style="width: 109px;" aria-label="Total: activate to sort column ascending">
+                                        colspan="1" style="width: 109px;"
+                                        aria-label="Total: activate to sort column ascending">
                                         Total</th>
                                     <th class="text-truncate sorting" tabindex="0" aria-controls="DataTables_Table_0"
                                         rowspan="1" colspan="1" style="width: 186px;"
@@ -98,16 +132,17 @@
                                     <td><span class="d-none">20200509</span>09 May 2020</td>
                                     <td><span class="badge bg-label-success"> Paid </span></td>
                                     <td>
-                                        <div class="d-flex align-items-center"><a href="javascript:;" data-bs-toggle="tooltip"
-                                                class="text-body" data-bs-placement="top" title=""
-                                                data-bs-original-title="Send Mail" aria-label="Send Mail"><i
+                                        <div class="d-flex align-items-center"><a href="javascript:;"
+                                                data-bs-toggle="tooltip" class="text-body" data-bs-placement="top"
+                                                title="" data-bs-original-title="Send Mail" aria-label="Send Mail"><i
                                                     class="bx bx-send mx-1"></i></a><a href="app-invoice-preview.html"
-                                                data-bs-toggle="tooltip" class="text-body" data-bs-placement="top" title=""
-                                                data-bs-original-title="Preview Invoice" aria-label="Preview Invoice"><i
-                                                    class="bx bx-show mx-1"></i></a>
+                                                data-bs-toggle="tooltip" class="text-body" data-bs-placement="top"
+                                                title="" data-bs-original-title="Preview Invoice"
+                                                aria-label="Preview Invoice"><i class="bx bx-show mx-1"></i></a>
                                             <div class="dropdown"><a href="javascript:;"
                                                     class="btn dropdown-toggle hide-arrow text-body p-0"
-                                                    data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></a>
+                                                    data-bs-toggle="dropdown"><i
+                                                        class="bx bx-dots-vertical-rounded"></i></a>
                                                 <div class="dropdown-menu dropdown-menu-end"><a href="javascript:;"
                                                         class="dropdown-item">Download</a><a href="app-invoice-edit.html"
                                                         class="dropdown-item">Edit</a><a href="javascript:;"
@@ -130,8 +165,9 @@
                                     <td>
                                         <div class="d-flex justify-content-start align-items-center">
                                             <div class="avatar-wrapper">
-                                                <div class="avatar avatar-sm me-2"><img src="../../assets//img/avatars/2.png"
-                                                        alt="Avatar" class="rounded-circle"></div>
+                                                <div class="avatar avatar-sm me-2"><img
+                                                        src="../../assets//img/avatars/2.png" alt="Avatar"
+                                                        class="rounded-circle"></div>
                                             </div>
                                             <div class="d-flex flex-column"><a href="pages-profile-user.html"
                                                     class="text-body text-truncate fw-semibold">Shamus Tuttle</a><small
@@ -142,16 +178,17 @@
                                     <td><span class="d-none">20201119</span>19 Nov 2020</td>
                                     <td><span class="badge bg-label-success"> Paid </span></td>
                                     <td>
-                                        <div class="d-flex align-items-center"><a href="javascript:;" data-bs-toggle="tooltip"
-                                                class="text-body" data-bs-placement="top" title=""
-                                                data-bs-original-title="Send Mail" aria-label="Send Mail"><i
+                                        <div class="d-flex align-items-center"><a href="javascript:;"
+                                                data-bs-toggle="tooltip" class="text-body" data-bs-placement="top"
+                                                title="" data-bs-original-title="Send Mail" aria-label="Send Mail"><i
                                                     class="bx bx-send mx-1"></i></a><a href="app-invoice-preview.html"
-                                                data-bs-toggle="tooltip" class="text-body" data-bs-placement="top" title=""
-                                                data-bs-original-title="Preview Invoice" aria-label="Preview Invoice"><i
-                                                    class="bx bx-show mx-1"></i></a>
+                                                data-bs-toggle="tooltip" class="text-body" data-bs-placement="top"
+                                                title="" data-bs-original-title="Preview Invoice"
+                                                aria-label="Preview Invoice"><i class="bx bx-show mx-1"></i></a>
                                             <div class="dropdown"><a href="javascript:;"
                                                     class="btn dropdown-toggle hide-arrow text-body p-0"
-                                                    data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></a>
+                                                    data-bs-toggle="dropdown"><i
+                                                        class="bx bx-dots-vertical-rounded"></i></a>
                                                 <div class="dropdown-menu dropdown-menu-end"><a href="javascript:;"
                                                         class="dropdown-item">Download</a><a href="app-invoice-edit.html"
                                                         class="dropdown-item">Edit</a><a href="javascript:;"
@@ -174,8 +211,9 @@
                                     <td>
                                         <div class="d-flex justify-content-start align-items-center">
                                             <div class="avatar-wrapper">
-                                                <div class="avatar avatar-sm me-2"><img src="../../assets//img/avatars/4.png"
-                                                        alt="Avatar" class="rounded-circle"></div>
+                                                <div class="avatar avatar-sm me-2"><img
+                                                        src="../../assets//img/avatars/4.png" alt="Avatar"
+                                                        class="rounded-circle"></div>
                                             </div>
                                             <div class="d-flex flex-column"><a href="pages-profile-user.html"
                                                     class="text-body text-truncate fw-semibold">Devonne
@@ -187,16 +225,17 @@
                                     <td><span class="d-none">20200925</span>25 Sep 2020</td>
                                     <td><span class="badge bg-label-success"> Paid </span></td>
                                     <td>
-                                        <div class="d-flex align-items-center"><a href="javascript:;" data-bs-toggle="tooltip"
-                                                class="text-body" data-bs-placement="top" title=""
-                                                data-bs-original-title="Send Mail" aria-label="Send Mail"><i
+                                        <div class="d-flex align-items-center"><a href="javascript:;"
+                                                data-bs-toggle="tooltip" class="text-body" data-bs-placement="top"
+                                                title="" data-bs-original-title="Send Mail" aria-label="Send Mail"><i
                                                     class="bx bx-send mx-1"></i></a><a href="app-invoice-preview.html"
                                                 data-bs-toggle="tooltip" class="text-body" data-bs-placement="top"
                                                 title="" data-bs-original-title="Preview Invoice"
                                                 aria-label="Preview Invoice"><i class="bx bx-show mx-1"></i></a>
                                             <div class="dropdown"><a href="javascript:;"
                                                     class="btn dropdown-toggle hide-arrow text-body p-0"
-                                                    data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></a>
+                                                    data-bs-toggle="dropdown"><i
+                                                        class="bx bx-dots-vertical-rounded"></i></a>
                                                 <div class="dropdown-menu dropdown-menu-end"><a href="javascript:;"
                                                         class="dropdown-item">Download</a><a href="app-invoice-edit.html"
                                                         class="dropdown-item">Edit</a><a href="javascript:;"
@@ -219,8 +258,9 @@
                                     <td>
                                         <div class="d-flex justify-content-start align-items-center">
                                             <div class="avatar-wrapper">
-                                                <div class="avatar avatar-sm me-2"><img src="../../assets//img/avatars/2.png"
-                                                        alt="Avatar" class="rounded-circle"></div>
+                                                <div class="avatar avatar-sm me-2"><img
+                                                        src="../../assets//img/avatars/2.png" alt="Avatar"
+                                                        class="rounded-circle"></div>
                                             </div>
                                             <div class="d-flex flex-column"><a href="pages-profile-user.html"
                                                     class="text-body text-truncate fw-semibold">Ariella Filippyev</a><small
@@ -232,16 +272,17 @@
                                     <td><span class="d-none">20200802</span>02 Aug 2020</td>
                                     <td><span class="d-none">-$202</span>-$202</td>
                                     <td>
-                                        <div class="d-flex align-items-center"><a href="javascript:;" data-bs-toggle="tooltip"
-                                                class="text-body" data-bs-placement="top" title=""
-                                                data-bs-original-title="Send Mail" aria-label="Send Mail"><i
+                                        <div class="d-flex align-items-center"><a href="javascript:;"
+                                                data-bs-toggle="tooltip" class="text-body" data-bs-placement="top"
+                                                title="" data-bs-original-title="Send Mail" aria-label="Send Mail"><i
                                                     class="bx bx-send mx-1"></i></a><a href="app-invoice-preview.html"
                                                 data-bs-toggle="tooltip" class="text-body" data-bs-placement="top"
                                                 title="" data-bs-original-title="Preview Invoice"
                                                 aria-label="Preview Invoice"><i class="bx bx-show mx-1"></i></a>
                                             <div class="dropdown"><a href="javascript:;"
                                                     class="btn dropdown-toggle hide-arrow text-body p-0"
-                                                    data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></a>
+                                                    data-bs-toggle="dropdown"><i
+                                                        class="bx bx-dots-vertical-rounded"></i></a>
                                                 <div class="dropdown-menu dropdown-menu-end"><a href="javascript:;"
                                                         class="dropdown-item">Download</a><a href="app-invoice-edit.html"
                                                         class="dropdown-item">Edit</a><a href="javascript:;"
@@ -264,8 +305,9 @@
                                     <td>
                                         <div class="d-flex justify-content-start align-items-center">
                                             <div class="avatar-wrapper">
-                                                <div class="avatar avatar-sm me-2"><img src="../../assets//img/avatars/6.png"
-                                                        alt="Avatar" class="rounded-circle"></div>
+                                                <div class="avatar avatar-sm me-2"><img
+                                                        src="../../assets//img/avatars/6.png" alt="Avatar"
+                                                        class="rounded-circle"></div>
                                             </div>
                                             <div class="d-flex flex-column"><a href="pages-profile-user.html"
                                                     class="text-body text-truncate fw-semibold">Roy Southerell</a><small
@@ -277,16 +319,17 @@
                                     <td><span class="d-none">20201215</span>15 Dec 2020</td>
                                     <td><span class="badge bg-label-success"> Paid </span></td>
                                     <td>
-                                        <div class="d-flex align-items-center"><a href="javascript:;" data-bs-toggle="tooltip"
-                                                class="text-body" data-bs-placement="top" title=""
-                                                data-bs-original-title="Send Mail" aria-label="Send Mail"><i
+                                        <div class="d-flex align-items-center"><a href="javascript:;"
+                                                data-bs-toggle="tooltip" class="text-body" data-bs-placement="top"
+                                                title="" data-bs-original-title="Send Mail" aria-label="Send Mail"><i
                                                     class="bx bx-send mx-1"></i></a><a href="app-invoice-preview.html"
                                                 data-bs-toggle="tooltip" class="text-body" data-bs-placement="top"
                                                 title="" data-bs-original-title="Preview Invoice"
                                                 aria-label="Preview Invoice"><i class="bx bx-show mx-1"></i></a>
                                             <div class="dropdown"><a href="javascript:;"
                                                     class="btn dropdown-toggle hide-arrow text-body p-0"
-                                                    data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></a>
+                                                    data-bs-toggle="dropdown"><i
+                                                        class="bx bx-dots-vertical-rounded"></i></a>
                                                 <div class="dropdown-menu dropdown-menu-end"><a href="javascript:;"
                                                         class="dropdown-item">Download</a><a href="app-invoice-edit.html"
                                                         class="dropdown-item">Edit</a><a href="javascript:;"
@@ -309,8 +352,9 @@
                                     <td>
                                         <div class="d-flex justify-content-start align-items-center">
                                             <div class="avatar-wrapper">
-                                                <div class="avatar avatar-sm me-2"><img src="../../assets//img/avatars/2.png"
-                                                        alt="Avatar" class="rounded-circle"></div>
+                                                <div class="avatar avatar-sm me-2"><img
+                                                        src="../../assets//img/avatars/2.png" alt="Avatar"
+                                                        class="rounded-circle"></div>
                                             </div>
                                             <div class="d-flex flex-column"><a href="pages-profile-user.html"
                                                     class="text-body text-truncate fw-semibold">Raynell
@@ -322,16 +366,17 @@
                                     <td><span class="d-none">20200609</span>09 Jun 2020</td>
                                     <td><span class="badge bg-label-success"> Paid </span></td>
                                     <td>
-                                        <div class="d-flex align-items-center"><a href="javascript:;" data-bs-toggle="tooltip"
-                                                class="text-body" data-bs-placement="top" title=""
-                                                data-bs-original-title="Send Mail" aria-label="Send Mail"><i
+                                        <div class="d-flex align-items-center"><a href="javascript:;"
+                                                data-bs-toggle="tooltip" class="text-body" data-bs-placement="top"
+                                                title="" data-bs-original-title="Send Mail" aria-label="Send Mail"><i
                                                     class="bx bx-send mx-1"></i></a><a href="app-invoice-preview.html"
                                                 data-bs-toggle="tooltip" class="text-body" data-bs-placement="top"
                                                 title="" data-bs-original-title="Preview Invoice"
                                                 aria-label="Preview Invoice"><i class="bx bx-show mx-1"></i></a>
                                             <div class="dropdown"><a href="javascript:;"
                                                     class="btn dropdown-toggle hide-arrow text-body p-0"
-                                                    data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></a>
+                                                    data-bs-toggle="dropdown"><i
+                                                        class="bx bx-dots-vertical-rounded"></i></a>
                                                 <div class="dropdown-menu dropdown-menu-end"><a href="javascript:;"
                                                         class="dropdown-item">Download</a><a href="app-invoice-edit.html"
                                                         class="dropdown-item">Edit</a><a href="javascript:;"
@@ -367,16 +412,17 @@
                                     <td><span class="d-none">20201022</span>22 Oct 2020</td>
                                     <td><span class="badge bg-label-success"> Paid </span></td>
                                     <td>
-                                        <div class="d-flex align-items-center"><a href="javascript:;" data-bs-toggle="tooltip"
-                                                class="text-body" data-bs-placement="top" title=""
-                                                data-bs-original-title="Send Mail" aria-label="Send Mail"><i
+                                        <div class="d-flex align-items-center"><a href="javascript:;"
+                                                data-bs-toggle="tooltip" class="text-body" data-bs-placement="top"
+                                                title="" data-bs-original-title="Send Mail" aria-label="Send Mail"><i
                                                     class="bx bx-send mx-1"></i></a><a href="app-invoice-preview.html"
                                                 data-bs-toggle="tooltip" class="text-body" data-bs-placement="top"
                                                 title="" data-bs-original-title="Preview Invoice"
                                                 aria-label="Preview Invoice"><i class="bx bx-show mx-1"></i></a>
                                             <div class="dropdown"><a href="javascript:;"
                                                     class="btn dropdown-toggle hide-arrow text-body p-0"
-                                                    data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></a>
+                                                    data-bs-toggle="dropdown"><i
+                                                        class="bx bx-dots-vertical-rounded"></i></a>
                                                 <div class="dropdown-menu dropdown-menu-end"><a href="javascript:;"
                                                         class="dropdown-item">Download</a><a href="app-invoice-edit.html"
                                                         class="dropdown-item">Edit</a><a href="javascript:;"
@@ -413,16 +459,17 @@
                                     <td><span class="d-none">20200801</span>01 Aug 2020</td>
                                     <td><span class="badge bg-label-success"> Paid </span></td>
                                     <td>
-                                        <div class="d-flex align-items-center"><a href="javascript:;" data-bs-toggle="tooltip"
-                                                class="text-body" data-bs-placement="top" title=""
-                                                data-bs-original-title="Send Mail" aria-label="Send Mail"><i
+                                        <div class="d-flex align-items-center"><a href="javascript:;"
+                                                data-bs-toggle="tooltip" class="text-body" data-bs-placement="top"
+                                                title="" data-bs-original-title="Send Mail" aria-label="Send Mail"><i
                                                     class="bx bx-send mx-1"></i></a><a href="app-invoice-preview.html"
                                                 data-bs-toggle="tooltip" class="text-body" data-bs-placement="top"
                                                 title="" data-bs-original-title="Preview Invoice"
                                                 aria-label="Preview Invoice"><i class="bx bx-show mx-1"></i></a>
                                             <div class="dropdown"><a href="javascript:;"
                                                     class="btn dropdown-toggle hide-arrow text-body p-0"
-                                                    data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></a>
+                                                    data-bs-toggle="dropdown"><i
+                                                        class="bx bx-dots-vertical-rounded"></i></a>
                                                 <div class="dropdown-menu dropdown-menu-end"><a href="javascript:;"
                                                         class="dropdown-item">Download</a><a href="app-invoice-edit.html"
                                                         class="dropdown-item">Edit</a><a href="javascript:;"
@@ -458,16 +505,17 @@
                                     <td><span class="d-none">20200923</span>23 Sep 2020</td>
                                     <td><span class="badge bg-label-success"> Paid </span></td>
                                     <td>
-                                        <div class="d-flex align-items-center"><a href="javascript:;" data-bs-toggle="tooltip"
-                                                class="text-body" data-bs-placement="top" title=""
-                                                data-bs-original-title="Send Mail" aria-label="Send Mail"><i
+                                        <div class="d-flex align-items-center"><a href="javascript:;"
+                                                data-bs-toggle="tooltip" class="text-body" data-bs-placement="top"
+                                                title="" data-bs-original-title="Send Mail" aria-label="Send Mail"><i
                                                     class="bx bx-send mx-1"></i></a><a href="app-invoice-preview.html"
                                                 data-bs-toggle="tooltip" class="text-body" data-bs-placement="top"
                                                 title="" data-bs-original-title="Preview Invoice"
                                                 aria-label="Preview Invoice"><i class="bx bx-show mx-1"></i></a>
                                             <div class="dropdown"><a href="javascript:;"
                                                     class="btn dropdown-toggle hide-arrow text-body p-0"
-                                                    data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></a>
+                                                    data-bs-toggle="dropdown"><i
+                                                        class="bx bx-dots-vertical-rounded"></i></a>
                                                 <div class="dropdown-menu dropdown-menu-end"><a href="javascript:;"
                                                         class="dropdown-item">Download</a><a href="app-invoice-edit.html"
                                                         class="dropdown-item">Edit</a><a href="javascript:;"
@@ -490,8 +538,9 @@
                                     <td>
                                         <div class="d-flex justify-content-start align-items-center">
                                             <div class="avatar-wrapper">
-                                                <div class="avatar avatar-sm me-2"><img src="../../assets//img/avatars/3.png"
-                                                        alt="Avatar" class="rounded-circle"></div>
+                                                <div class="avatar avatar-sm me-2"><img
+                                                        src="../../assets//img/avatars/3.png" alt="Avatar"
+                                                        class="rounded-circle"></div>
                                             </div>
                                             <div class="d-flex flex-column"><a href="pages-profile-user.html"
                                                     class="text-body text-truncate fw-semibold">Yelena O'Hear</a><small
@@ -503,16 +552,17 @@
                                     <td><span class="d-none">20210318</span>18 Mar 2021</td>
                                     <td><span class="d-none">$666</span>$666</td>
                                     <td>
-                                        <div class="d-flex align-items-center"><a href="javascript:;" data-bs-toggle="tooltip"
-                                                class="text-body" data-bs-placement="top" title=""
-                                                data-bs-original-title="Send Mail" aria-label="Send Mail"><i
+                                        <div class="d-flex align-items-center"><a href="javascript:;"
+                                                data-bs-toggle="tooltip" class="text-body" data-bs-placement="top"
+                                                title="" data-bs-original-title="Send Mail" aria-label="Send Mail"><i
                                                     class="bx bx-send mx-1"></i></a><a href="app-invoice-preview.html"
                                                 data-bs-toggle="tooltip" class="text-body" data-bs-placement="top"
                                                 title="" data-bs-original-title="Preview Invoice"
                                                 aria-label="Preview Invoice"><i class="bx bx-show mx-1"></i></a>
                                             <div class="dropdown"><a href="javascript:;"
                                                     class="btn dropdown-toggle hide-arrow text-body p-0"
-                                                    data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></a>
+                                                    data-bs-toggle="dropdown"><i
+                                                        class="bx bx-dots-vertical-rounded"></i></a>
                                                 <div class="dropdown-menu dropdown-menu-end"><a href="javascript:;"
                                                         class="dropdown-item">Download</a><a href="app-invoice-edit.html"
                                                         class="dropdown-item">Edit</a><a href="javascript:;"
@@ -540,14 +590,18 @@
                                         <li class="paginate_button page-item active"><a href="#"
                                                 aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0"
                                                 class="page-link">1</a></li>
-                                        <li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_0"
-                                                data-dt-idx="2" tabindex="0" class="page-link">2</a></li>
-                                        <li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_0"
-                                                data-dt-idx="3" tabindex="0" class="page-link">3</a></li>
-                                        <li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_0"
-                                                data-dt-idx="4" tabindex="0" class="page-link">4</a></li>
-                                        <li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_0"
-                                                data-dt-idx="5" tabindex="0" class="page-link">5</a></li>
+                                        <li class="paginate_button page-item "><a href="#"
+                                                aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0"
+                                                class="page-link">2</a></li>
+                                        <li class="paginate_button page-item "><a href="#"
+                                                aria-controls="DataTables_Table_0" data-dt-idx="3" tabindex="0"
+                                                class="page-link">3</a></li>
+                                        <li class="paginate_button page-item "><a href="#"
+                                                aria-controls="DataTables_Table_0" data-dt-idx="4" tabindex="0"
+                                                class="page-link">4</a></li>
+                                        <li class="paginate_button page-item "><a href="#"
+                                                aria-controls="DataTables_Table_0" data-dt-idx="5" tabindex="0"
+                                                class="page-link">5</a></li>
                                         <li class="paginate_button page-item next" id="DataTables_Table_0_next"><a href="#"
                                                 aria-controls="DataTables_Table_0" data-dt-idx="6" tabindex="0"
                                                 class="page-link">Next</a></li>
