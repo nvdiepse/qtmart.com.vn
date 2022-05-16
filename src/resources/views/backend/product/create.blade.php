@@ -2,7 +2,7 @@
 
 @section('content')
     <div id="producCreate">
-        <br>
+        @include('layouts.admin.product.nav')
         <div class="row">
             <div class="col-lg-12">
                 <div class="page-header-breadcrumb">
@@ -136,7 +136,8 @@
                                                         <label class="col-sm-2 col-form-label">Ảnh sản phẩm</label>
                                                         <div class="col-sm-10">
                                                             <input type="file" name="files[]" id="filer_input1"
-                                                                multiple="multiple">
+                                                                onChange="previewImageProduct(event)">
+                                                            <img id="productImage" src="#" alt="your image" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -171,7 +172,8 @@
                                                         <div class="input-group">
                                                             <span class="input-group-addon"><i
                                                                     class="icofont icofont-ui-keyboard"></i></span>
-                                                            <input type="text" class="form-control" placeholder="Keyword">
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Keyword">
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-6">
@@ -384,7 +386,7 @@
 
 @section('js')
     <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
-
+    <script type="text/javascript" src="{{ mix('js/admin/product/product.js') }}"></script>
     <script>
         CKEDITOR.replace('summary-ckeditor', {
             filebrowserUploadUrl: "{{ route('ckeditor.upload', ['_token' => csrf_token()]) }}",
@@ -393,5 +395,4 @@
     </script>
 
     <script src="{{ asset('libraries\assets\pages\filer\jquery.fileuploads.init.js') }}" type="text/javascript"></script>
-    <script type="text/javascript" src="{{ mix('js/admin/product/create.js') }}"></script>
 @endsection

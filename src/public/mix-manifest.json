@@ -1,6 +1,7 @@
 {
     "/js/admin/product/create.js": "/js/admin/product/create.js",
     "/js/admin/product/index.js": "/js/admin/product/index.js",
+    "/js/admin/product/product.js": "/js/admin/product/product.js",
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/js/clients/home.js": "/js/clients/home.js"

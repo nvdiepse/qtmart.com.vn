@@ -50,7 +50,7 @@ abstract class BaseRepository
      */
     public function getPaginate($orderBy = "asc", int $limit = 25)
     {
-        return $this->model->orderBy($orderBy)->paginate($limit);
+        return $this->model->orderBy('id', $orderBy)->paginate($limit);
     }
 
     /**

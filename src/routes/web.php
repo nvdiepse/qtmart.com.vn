@@ -26,6 +26,18 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/get-data', 'Api\ProductController@getAll');
     });
 
+    Route::group(['prefix' => 'product-category'], function () {
+        Route::get('/', 'Admin\ProductCategoryController@index');
+        Route::get('/create', 'Admin\ProductCategoryController@create');
+        Route::post('/store', 'Admin\ProductCategoryController@store')->name("product_category.create");
+    });
+
+    Route::group(['prefix' => 'brand'], function () {
+        Route::get('/', 'Admin\BrandController@index')->name("brand.index");
+        Route::get('/create', 'Admin\BrandController@create');
+        Route::post('/store', 'Admin\BrandController@store')->name("brand.create");
+    });
+
     Route::group(['prefix' => 'blog'], function () {
         Route::get('/', 'Admin\ArticleController@index');
         Route::get('/create', 'Admin\ArticleController@create');
