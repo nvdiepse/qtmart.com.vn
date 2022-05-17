@@ -2,19 +2,24 @@
 
 namespace App\Services;
 
-use App\Repositories\BrandRepository;
+use App\Repositories\ProductCategoryRepository;
 
 /**
  *
  */
 class ProductCategoryService
 {
-    protected $brandRepository;
+    protected $ProductCategoryRepository;
 
     public function __construct(
-        BrandRepository $brandRepository
+        ProductCategoryRepository $ProductCategoryRepository
     ) {
-        $this->brandRepository = $brandRepository;
+        $this->ProductCategoryRepository = $ProductCategoryRepository;
+    }
+
+    public function getAll()
+    {
+        return $this->ProductCategoryRepository->getAll();
     }
 
     public function create($data)
@@ -40,5 +45,10 @@ class ProductCategoryService
     public function findAll($orderBy = "Desc", $offset = 0, $limit = 25)
     {
         // return $this->productCategoryRepository->findAll($orderBy, $offset, $)
+    }
+
+    public function getPrCategoriesSort()
+    {
+        // $prCategoriesSort = $this->ProductCategoryRepository;
     }
 }

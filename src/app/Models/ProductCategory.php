@@ -10,4 +10,7 @@ class ProductCategory extends Model
     use SoftDeletes;
     public $timestamps = true;
     protected $table = 'mod_product_category';
+
+    const STATUS_ACTIVE = 1;
+    const STATUS_HIDE = 0;
 }

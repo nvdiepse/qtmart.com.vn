@@ -27,9 +27,9 @@ Route::group(['prefix' => 'admin'], function () {
     });
 
     Route::group(['prefix' => 'product-category'], function () {
-        Route::get('/', 'Admin\ProductCategoryController@index');
-        Route::get('/create', 'Admin\ProductCategoryController@create');
-        Route::post('/store', 'Admin\ProductCategoryController@store')->name("product_category.create");
+        Route::get('/', 'Admin\ProductCategoryController@index')->name('product_category.index');
+        Route::get('/create', 'Admin\ProductCategoryController@create')->name('product_category.create');
+        Route::post('/store', 'Admin\ProductCategoryController@store')->name("product_category.store");
     });
 
     Route::group(['prefix' => 'brand'], function () {

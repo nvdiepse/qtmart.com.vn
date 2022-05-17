@@ -14,7 +14,7 @@
                         </a>
                     </li>
                     <li class="">
-                        <a href="dashboard-crm.htm">
+                        <a href="{{route('product_category.index')}}">
                             <span class="pcoded-mtext">Sản phẩm</span>
                         </a>
                     </li>

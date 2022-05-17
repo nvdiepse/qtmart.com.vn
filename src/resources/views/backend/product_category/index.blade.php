@@ -54,10 +54,13 @@
                                     class="dt-action-buttons text-xl-end text-lg-start text-md-end text-start mt-md-0 mt-3">
                                     <div class="dt-buttons">
                                         <button class="dt-button btn btn-primary" tabindex="0"
-                                            aria-controls="DataTables_Table_0" type="button"><span><i
-                                                    class="bx bx-plus me-md-2"></i><span
-                                                    class="d-md-inline-block d-none">Create
-                                                    Invoice</span></span></button>
+                                            aria-controls="DataTables_Table_0" type="button"
+                                            onclick="window.location='{{ route('product_category.create') }}'">
+                                            <span>
+                                                <i class="bx bx-plus me-md-2"></i>
+                                                <span class="d-md-inline-block d-none">Tạo mới sản phẩm</span>
+                                            </span>
+                                        </button>
                                     </div>
                                 </div>
                             </div>

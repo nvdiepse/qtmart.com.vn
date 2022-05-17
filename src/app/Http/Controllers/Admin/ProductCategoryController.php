@@ -22,14 +22,19 @@ class ProductCategoryController extends Controller
 
     public function index()
     {
-        return view('backend.product_category.index');
+        $prCategories = $this->productCategoryService->getAll();
+
+        $viewData = [
+            'prCategories' => $prCategories
+        ];
+        return view('backend.product_category.index', $viewData);
     }
 
     public function create()
     {
-        // $data = $this->productCategoryService->getAll();
+        $data = $this->productCategoryService->getPrCategoriesSort();
         return view('backend.product_category.create', [
-            // 'data' => $data,
+            'data' => $data,
         ]);
     }
 
@@ -81,4 +86,3 @@ class ProductCategoryController extends Controller
         }
     }
 }
-

@@ -20,6 +20,7 @@ class CreateModProductCategory extends Migration
             $table->integer('status');
             $table->integer('parent_id');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
