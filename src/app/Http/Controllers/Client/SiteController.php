@@ -8,6 +8,7 @@ use App\Services\Client\SliderService;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use Meta;
 
 class SiteController extends Controller
 {
@@ -23,6 +24,21 @@ class SiteController extends Controller
     }
     public function home()
     {
+        Meta::set('og:image', '');
+        Meta::set('og:image', '');
+
+
+        Meta::set('title', 'QTMart - Hệ thống điện máy thông minh');
+        Meta::set('og:site', 'Diepnv');
+        Meta::set('og:url', 'http://localhost:8000');
+        // Meta::set('title', 'Diepnv');
+        // Meta::set('description', 'This is my home. Enjoy!');
+        // Meta::set('image', asset('images/home-logo.png'));
+        // Meta::set('og:image', asset('images/home-logo.png'));
+        // Meta::set('site_name', 'site name');
+        // Meta::set('url', 'url');
+        // Meta::set('url', 'url');
+
         $dealsOfTheWeek = $this->productService->getDealsOfTheWeek();
         $hotBestSellers = $this->productService->getHotBestSellers();
         $hotNewArrivals = $this->productService->getHotNewArrivals();

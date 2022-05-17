@@ -17,5 +17,6 @@ mix.js('resources/js/app.js', 'public/js')
 mix.js('resources/js/clients/home.js', 'public/js/clients');
 mix.js('resources/js/admin/product/index.js', 'public/js/admin/product');
 mix.js('resources/js/admin/product/create.js', 'public/js/admin/product');
+mix.js('resources/js/admin/order/create.js', 'public/js/admin/order');
 mix.js('resources/js/admin/product/product.js', 'public/js/admin/product');
 

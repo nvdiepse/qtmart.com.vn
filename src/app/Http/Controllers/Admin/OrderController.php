@@ -16,6 +16,12 @@ class OrderController extends Controller
         return view('backend.order.index');
     }
 
+
+    public function create()
+    {
+        return view('backend.order.create');
+    }
+
     public function detailById($id)
     {
         return view('backend.order.detail');

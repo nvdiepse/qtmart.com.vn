@@ -51,6 +51,8 @@ Route::group(['prefix' => 'admin'], function () {
 
     Route::group(['prefix' => 'order'], function () {
         Route::get('/', 'Admin\OrderController@index');
+        Route::get('/create', 'Admin\OrderController@create');
+        Route::get('/store', 'Admin\OrderController@store');
         Route::get('/detail/{id}', 'Admin\OrderController@detailById');
     });
 

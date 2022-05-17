@@ -7,6 +7,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <title>QTMart - Hệ thống điện máy thông minh</title>
+    {{-- META facebook --}}
+    {!! Meta::tag('og:site', asset('images/default-logo.png')) !!}
+    {!! Meta::tag('og:rich_attachment', 'true') !!}
+    {!! Meta::tag('og:type', 'website') !!}
+    {!! Meta::tag('og:url', 'qtmat.com.vn') !!}
+    {!! Meta::tag('og:image:width', '800') !!}
+    {!! Meta::tag('og:image:height', '354') !!}
+    {!! Meta::tag('og:image', asset('images/default-logo.png')) !!}
+    {{-- META facebook --}}
+
+    {{-- META HEADER --}}
+    {!! Meta::tag('robots') !!}
+    {!! Meta::tag('description', '') !!}
+    {!! Meta::tag('image', asset('images/default-logo.png')) !!}
+    {!! Meta::tag('og:image', asset('images/default-logo.png')) !!}
+    {{-- META HEADER --}}
+    <meta name="keywords" content="VnExpress, tin tức, tin the gioi, tin nhanh, tin tuc viet nam, doc bao"/>
+
     <link rel="stylesheet" type="text/css" href="{{ asset('client-theme/assets/css/bootstrap.min.css') }}"
         media="all" />
     <link rel="stylesheet" type="text/css" href="{{ asset('client-theme/assets/css/font-awesome.min.css') }}"
@@ -45,6 +63,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="{{ asset('client-theme/assets/images/fav-icon.pn') }}">
+
+    {{-- {!! Meta::tag('robots') !!}
+    {!! Meta::tag('site_name', 'My site') !!}
+    {!! Meta::tag('url', Request::url()); !!}
+    {!! Meta::tag('title', '') !!}
+    {!! Meta::tag('description', '') !!}
+    {!! Meta::tag('image', asset('images/default-logo.png')) !!}
+    {!! Meta::tag('og:image', asset('images/default-logo.png')) !!} --}}
+
+
+
     @yield('js')
 </head>
 
