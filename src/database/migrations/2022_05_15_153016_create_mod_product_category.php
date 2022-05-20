@@ -17,7 +17,7 @@ class CreateModProductCategory extends Migration
             $table->id();
             $table->string('name');
             $table->string('code')->unique();
-            $table->integer('status');
+            $table->tinyInteger('status')->default(0);
             $table->integer('parent_id');
             $table->timestamps();
             $table->softDeletes();

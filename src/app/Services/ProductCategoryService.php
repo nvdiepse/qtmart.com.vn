@@ -22,24 +22,24 @@ class ProductCategoryService
         return $this->ProductCategoryRepository->getAll();
     }
 
-    public function create($data)
+    public function store($data)
     {
-        return $this->brandRepository->create($data);
+        return $this->ProductCategoryRepository->create($data);
     }
 
     public function updateById($id, $data)
     {
-        return $this->brandRepository->update($id, $data);
+        return $this->ProductCategoryRepository->update($id, $data);
     }
 
     public function findById($id)
     {
-        return $this->brandRepository->findOne($id);
+        return $this->ProductCategoryRepository->findOne($id);
     }
 
     public function deleteById($id)
     {
-        return $this->productCategoryRepository->delete($id);
+        return $this->ProductCategoryRepository->delete($id);
     }
 
     public function findAll($orderBy = "Desc", $offset = 0, $limit = 25)
@@ -50,5 +50,10 @@ class ProductCategoryService
     public function getPrCategoriesSort()
     {
         // $prCategoriesSort = $this->ProductCategoryRepository;
+    }
+
+    public function getPrCategories()
+    {
+        return $this->ProductCategoryRepository->getPrCategories();
     }
 }

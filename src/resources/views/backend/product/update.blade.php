@@ -22,7 +22,7 @@
                             <a href="#!">Sản phẩm</a>
                         </li>
                         <li class="breadcrumb-item">
-                            <a href="#!">Tạo mới sản phẩm</a>
+                            <a href="#!">Cập nhập sản phẩm</a>
                         </li>
                     </ul>
                 </div>
@@ -34,7 +34,7 @@
                 <!-- Product edit card start -->
                 <div class="card">
                     <div class="card-header">
-                        <h5>Tạo mới sản phẩm</h5>
+                        <h5>Cập nhập sản phẩm</h5>
                     </div>
                     <div class="card-block">
                         <div class="row">
@@ -70,7 +70,7 @@
                                         </li>
                                     </ul>
                                     <!-- Tab panes -->
-                                    <form action=" {{ route('product.store') }}" method="POST"
+                                    <form action=" {{ route('product.update', $product->id) }}" method="POST"
                                         enctype="multipart/form-data">
                                         @csrf
                                         <div class="tab-content">
@@ -83,7 +83,7 @@
                                                                 sản phẩm (*)</label>
                                                             <div class="col-sm-10">
                                                                 <input type="text" class="form-control" id="product_name"
-                                                                    name="name">
+                                                                    name="name" value="{{ $product->name }}">
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
@@ -91,7 +91,8 @@
                                                                 phẩm</label>
                                                             <div class="col-sm-10">
                                                                 <input type="text" id="code" class="form-control"
-                                                                    name="code" placeholder="Tự động tạo mã">
+                                                                    name="code" placeholder="Tự động tạo mã"
+                                                                    value="{{ $product->code }}">
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
@@ -101,7 +102,8 @@
                                                                 <select name="product_category_id" id="product_category"
                                                                     class="form-control">
                                                                     @foreach ($proCategories as $item)
-                                                                        <option value="{{ $item->id }}">
+                                                                        <option value="{{ $item->id }}"
+                                                                            {{ $item->id === $product->product_category_id ? 'selected' : '' }}>
                                                                             {{ $item->name }}</option>
                                                                     @endforeach
                                                                 </select>
@@ -112,15 +114,16 @@
                                                                 tính</label>
                                                             <div class="col-sm-10">
                                                                 <input type="text" class="form-control" id="unit"
-                                                                    name="product_unit"
-                                                                    placeholder="Vd: Cái, Chiếc, Lọ ...">
+                                                                    name="product_unit" placeholder="Vd: Cái, Chiếc, Lọ ..."
+                                                                    value="{{ $product->product_unit }}">
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
                                                             <label class="col-sm-2 col-form-label" for="desc">Mô tả sản
                                                                 phẩm</label>
                                                             <div class="col-sm-10">
-                                                                <textarea rows="5" cols="5" class="form-control" placeholder="Default textarea" id="desc" name="desc"></textarea>
+                                                                <textarea rows="5" cols="5" class="form-control" placeholder="Default textarea" id="desc"
+                                                                    name="desc">{{ $product->desc }}</textarea>
                                                             </div>
                                                         </div>
                                                         <hr>
@@ -133,7 +136,8 @@
                                                                 <div class="form-check form-check-inline">
                                                                     <label class="form-check-label">
                                                                         <input class="form-check-input" type="radio"
-                                                                            name="status" id="gender-1" value="1">
+                                                                            name="status" id="gender-1" value="1"
+                                                                            {{ $product->status === 1 ? 'checked' : '' }}>
                                                                         Hoạt
                                                                         động
                                                                     </label>
@@ -141,7 +145,8 @@
                                                                 <div class="form-check form-check-inline">
                                                                     <label class="form-check-label">
                                                                         <input class="form-check-input" type="radio"
-                                                                            name="status" id="gender-2" value="0">
+                                                                            name="status" id="gender-2" value="0"
+                                                                            {{ $product->status === 0 ? 'checked' : '' }}>
                                                                         Không
                                                                         hoạt động
                                                                     </label>
@@ -153,7 +158,7 @@
                                                             <label class="col-sm-2 col-form-label">Ảnh sản phẩm</label>
                                                             <div class="col-sm-10">
                                                                 <div style="position:relative;">
-                                                                    <a class="btn btn-primary" href="#">
+                                                                    <a class="btn btn-primary" href="javascript:;">
                                                                         Chọn ảnh
                                                                         <input type="file"
                                                                             style="position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:&quot;progid:DXImageTransform.Microsoft.Alpha(Opacity=0)&quot;;opacity:0;background-color:transparent;color:transparent;"
@@ -164,13 +169,14 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <img id="previewProductImage" src="/images/no-image.jpg"
+                                                        <img id="previewProductImage"
+                                                            src="{{ pare_url_file($product->image ?? '') ?? '/images/no-image.jpg' }}"
                                                             alt="Preview Image" width="200px" height="200px" />
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-sm-12">
-                                                        <textarea class="form-control" id="summary-ckeditor" name="content"></textarea>
+                                                        <textarea class="form-control" id="summary-ckeditor" name="content">{{ $product->content }}</textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -382,8 +388,8 @@
                                             <div class="col-sm-12">
                                                 <div class="text-center m-t-20">
                                                     <button type="submit"
-                                                        class="btn btn-primary waves-effect waves-light m-r-10">Tạo
-                                                        mới</button>
+                                                        class="btn btn-primary waves-effect waves-light m-r-10">Cập
+                                                        nhập</button>
                                                     <button type="button"
                                                         class="btn btn-warning waves-effect waves-light">Discard</button>
                                                 </div>

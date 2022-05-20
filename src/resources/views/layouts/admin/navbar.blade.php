@@ -14,7 +14,7 @@
                         </a>
                     </li>
                     <li class="">
-                        <a href="{{route('product_category.index')}}">
+                        <a href="{{ route('product.index') }}">
                             <span class="pcoded-mtext">Sản phẩm</span>
                         </a>
                     </li>

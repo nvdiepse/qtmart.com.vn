@@ -1,7 +1,7 @@
 @extends('layouts.admin.app')
 
 @section('content')
-    <div id="producCreate">
+    <div id="producUpdate">
         @include('layouts.admin.product.nav', ['optionNav' => 2])
         @include('layouts.admin.product.slide')
 
@@ -25,10 +25,10 @@
                 <!-- Product edit card start -->
                 <div class="card">
                     <div class="card-header">
-                        <h5>Tạo mới danh mục sản phẩm</h5>
+                        <h5>Cập nhập danh mục sản phẩm</h5>
                     </div>
                     <div class="card-block">
-                        <form action="{{ route('product_category.store') }}" method="post">
+                        <form action="{{ route('product_category.update', $prCategories->id) }}" method="post">
                             @csrf
                             <div class="row">
                                 <div class="col-sm-12">
@@ -50,14 +50,15 @@
                                     <div class="form-group row">
                                         <label class="col-sm-2 col-form-label">Tên danh mục (*)</label>
                                         <div class="col-sm-10">
-                                            <input type="text" class="form-control" name="name"
-                                                placeholder="Tên danh mục">
+                                            <input type="text" class="form-control" name="name" placeholder="Tên danh mục"
+                                                value="{{ $prCategories->name }}">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label class="col-sm-2 col-form-label">Mã danh mục</label>
                                         <div class="col-sm-10">
-                                            <input type="text" class="form-control" name="code" placeholder="Mã danh mục">
+                                            <input type="text" class="form-control" name="code" placeholder="Mã danh mục"
+                                                value="{{ $prCategories->code }}">
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -66,10 +67,17 @@
                                             <select class="form-control" name="parent_id">
                                                 <option value="" readonly="true" hidden="true" selected>Chọn danh mục cha
                                                 </option>
-                                                <option value="1">Danh mục 1</option>
-                                                <option value="2">Danh mục 2</option>
-                                                <option value="3">Danh mục 3</option>
-                                                <option value="4">Danh mục 4</option>
+                                                <option value="1" {{ 1 === $prCategories->parent_id ? 'selected' : '' }}>
+                                                    Danh mục 1</option>
+                                                <option value="2" {{ 2 === $prCategories->parent_id ? 'selected' : '' }}>
+                                                    Danh
+                                                    mục 2</option>
+                                                <option value="3" {{ 3 === $prCategories->parent_id ? 'selected' : '' }}>
+                                                    Danh
+                                                    mục 3</option>
+                                                <option value="4" {{ 4 === $prCategories->parent_id ? 'selected' : '' }}>
+                                                    Danh
+                                                    mục 4</option>
                                             </select>
                                         </div>
                                     </div>
@@ -79,7 +87,7 @@
                                             <div class="form-check form-check-inline">
                                                 <label class="form-check-label">
                                                     <input class="form-check-input" type="radio" name="status" id="gender-1"
-                                                        value="1">
+                                                        value="1" {{ $prCategories->status === 1 ? 'checked' : '' }}>
                                                     Hoạt
                                                     động
                                                 </label>
@@ -87,7 +95,7 @@
                                             <div class="form-check form-check-inline">
                                                 <label class="form-check-label">
                                                     <input class="form-check-input" type="radio" name="status" id="gender-2"
-                                                        value="0">
+                                                        value="0" {{ $prCategories->status === 1 ? 'checked' : '' }}>
                                                     Không
                                                     hoạt động
                                                 </label>
@@ -100,7 +108,7 @@
                             <div class="form-group row">
                                 <label class="col-sm-2"></label>
                                 <div class="col-sm-10">
-                                    <button type="submit" class="btn btn-primary m-b-0">Tạo mới</button>
+                                    <button type="submit" class="btn btn-primary m-b-0">Cập nhập</button>
                                 </div>
                             </div>
                         </form>

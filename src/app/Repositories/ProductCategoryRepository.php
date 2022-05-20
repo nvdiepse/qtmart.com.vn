@@ -17,4 +17,9 @@ class ProductCategoryRepository extends BaseRepository
             ->select('id', 'parent_id', 'name')
             ->get();
     }
+
+    public function getPrCategories()
+    {
+        return $this->model->orderByDesc('id')->paginate(10);
+    }
 }

@@ -9,5 +9,5 @@ class Product extends Model
 {
     use SoftDeletes;
     protected $table = 'mod_product';
-    public $timestamps = true;
+    protected $guarded = [''];
 }

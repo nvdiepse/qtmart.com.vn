@@ -19,9 +19,16 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/', 'HomeController@index')->name('home');
 
     Route::group(['prefix' => 'product'], function () {
-        Route::get('/create', 'Admin\ProductController@create');
-        Route::get('/', 'Admin\ProductController@index');
+        Route::get('/', 'Admin\ProductController@index')->name('product.index');
+        Route::get('/create', 'Admin\ProductController@create')->name('product.create');
+        Route::post('/store', 'Admin\ProductController@store')->name('product.store');
         Route::get('/detail', 'Admin\ProductController@index');
+
+        Route::get('/active/{id}', 'Admin\ProductController@active')->name('product.active');
+        Route::get('/delete/{id}', 'Admin\ProductController@delete')->name('product.delete');
+
+        Route::get('update/{id}', 'Admin\ProductController@edit')->name('product.update');
+        Route::post('update/{id}', 'Admin\ProductController@update');
 
         Route::get('/get-data', 'Api\ProductController@getAll');
     });
@@ -30,6 +37,11 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/', 'Admin\ProductCategoryController@index')->name('product_category.index');
         Route::get('/create', 'Admin\ProductCategoryController@create')->name('product_category.create');
         Route::post('/store', 'Admin\ProductCategoryController@store')->name("product_category.store");
+        Route::get('/active/{id}', 'Admin\ProductCategoryController@active')->name('product_category.active');
+        Route::get('/delete/{id}', 'Admin\ProductCategoryController@delete')->name('product_category.delete');
+
+        Route::get('update/{id}', 'Admin\ProductCategoryController@edit')->name('product_category.update');
+        Route::post('update/{id}', 'Admin\ProductCategoryController@update');
     });
 
     Route::group(['prefix' => 'brand'], function () {

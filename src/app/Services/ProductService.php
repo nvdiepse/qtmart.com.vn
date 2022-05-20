@@ -20,8 +20,7 @@ class ProductService
      */
     public function __construct(
         ProductRepository $productRepository
-    )
-    {
+    ) {
         $this->productRepository = $productRepository;
     }
 
@@ -66,8 +65,13 @@ class ProductService
         $this->productRepository->delete($id);
     }
 
-    public function getAll($limit, $offset)
+    public function getAll()
     {
-        return $this->productRepository->getAll($limit, $offset);
+        return $this->productRepository->getAll();
+    }
+
+    public function getProduct()
+    {
+        return $this->productRepository->getProducts();
     }
 }
