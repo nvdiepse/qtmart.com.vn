@@ -38,10 +38,10 @@ class ProductController extends Controller
 
     public function store(StoreRequest $request)
     {
+        $data = $request->except('_token', 'image');
 
         try {
             DB::beginTransaction();
-            $data = $request->except('_token', 'image');
             $data['slug'] = Str::slug($data['name']);
             $data['brand_id'] = 1;
             $data['created_at'] = Carbon::now();
@@ -60,7 +60,6 @@ class ProductController extends Controller
         } catch (Exception $e) {
             DB::rollBack();
             report($e);
-            dd($e);
         }
     }
 

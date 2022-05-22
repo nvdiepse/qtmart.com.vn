@@ -44,16 +44,36 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('update/{id}', 'Admin\ProductCategoryController@update');
     });
 
+    Route::group(['prefix' => 'menu'], function () {
+        Route::get('/', 'Admin\MenuController@index')->name('menu.index');
+        Route::get('/create', 'Admin\MenuController@create')->name('menu.create');
+        Route::post('/store', 'Admin\MenuController@store')->name("menu.store");
+
+        Route::get('/active/{id}', 'Admin\MenuController@active')->name('menu.active');
+        Route::get('/delete/{id}', 'Admin\MenuController@delete')->name('menu.delete');
+
+        Route::get('update/{id}', 'Admin\MenuController@edit')->name('menu.update');
+        Route::post('update/{id}', 'Admin\MenuController@update');
+    });
+
+    Route::group(['prefix' => 'blog'], function () {
+        Route::get('/', 'Admin\ArticleController@index')->name('blog.index');;
+        Route::get('/create', 'Admin\ArticleController@create')->name('blog.create');
+        Route::post('/store', 'Admin\ArticleController@store')->name("blog.store");
+
+        Route::get('/active/{id}', 'Admin\ArticleController@active')->name('blog.active');
+        Route::get('/delete/{id}', 'Admin\ArticleControllerr@delete')->name('blog.delete');
+
+        Route::get('update/{id}', 'Admin\ArticleController@edit')->name('blog.update');
+        Route::post('update/{id}', 'Admin\ArticleController@update');
+    });
+
     Route::group(['prefix' => 'brand'], function () {
         Route::get('/', 'Admin\BrandController@index')->name("brand.index");
         Route::get('/create', 'Admin\BrandController@create');
         Route::post('/store', 'Admin\BrandController@store')->name("brand.create");
     });
 
-    Route::group(['prefix' => 'blog'], function () {
-        Route::get('/', 'Admin\ArticleController@index');
-        Route::get('/create', 'Admin\ArticleController@create');
-    });
 
     Route::group(['prefix' => 'event'], function () {
     });

@@ -1,7 +1,7 @@
 @extends('layouts.admin.app')
 
 @section('content')
-    @include('layouts.admin.product.nav', ['optionNav' => 2])
+    @include('layouts.admin.blog.nav', ['optionNav' => 2])
 
     <br>
     <div class="row">
@@ -11,10 +11,10 @@
                     <li class="breadcrumb-item">
                         <a href="index-1.htm"> <i class="feather icon-home"></i> </a>
                     </li>
-                    <li class="breadcrumb-item"><a href="#!">Sản phẩm</a>
+                    <li class="breadcrumb-item"><a href="#!">Menu</a>
                     </li>
                     <li class="breadcrumb-item">
-                        Danh mục sản phẩm
+                        Danh sách menu
                     </li>
                 </ul>
             </div>
@@ -25,10 +25,10 @@
     <div class="dt-action-buttons text-xl-end text-lg-start text-md-end text-start mt-md-0 mt-3">
         <div class="dt-buttons">
             <button class="dt-button btn btn-primary" tabindex="0" aria-controls="DataTables_Table_0" type="button"
-                onclick="window.location='{{ route('product_category.create') }}'">
+                onclick="window.location='{{ route('menu.create') }}'">
                 <span>
                     <i class="bx bx-plus me-md-2"></i>
-                    <span class="d-md-inline-block d-none">Tạo mới</span>
+                    <span class="d-md-inline-block d-none">Tạo mới </span>
                 </span>
             </button>
         </div>
@@ -39,7 +39,7 @@
         <div class="container-xxl flex-grow-1 container-p-y">
             <div class="card">
                 <!-- Billing History -->
-                <h5 class="card-header border-bottom">Danh sách danh mục sản phẩm</h5>
+                <h5 class="card-header border-bottom">Danh sách menu</h5>
                 <div class="card-datatable table-responsive">
                     <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
                         <div class="ms-2 me-3">
@@ -65,16 +65,11 @@
                                 <tr role="row">
                                     <th class="control sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
                                         colspan="1" aria-label=": activate to sort column ascending">
-                                        Tên danh mục
-                                    </th>
-                                    <th class="sorting sorting_desc" tabindex="0" aria-controls="DataTables_Table_0"
-                                        rowspan="1" colspan="1" aria-label="#ID: activate to sort column ascending"
-                                        aria-sort="descending">
-                                        Mã danh mục
+                                        Tên menu
                                     </th>
                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
                                         colspan="1" aria-label=": activate to sort column ascending">
-                                        Danh mục cha
+                                        Menu cha
                                     </th>
                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
                                         colspan="1" aria-label="Client: activate to sort column ascending">
@@ -87,25 +82,24 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($prCategories as $category)
+                                @foreach ($menus as $menu)
                                     <tr class="odd">
-                                        <td class="sorting_1">{{ $category->name }}</td>
-                                        <td class="sorting_1">{{ $category->code }}</td>
-                                        <td class="sorting_1">ID: {{ $category->parent_id }} (pendding)</td>
+                                        <td class="sorting_1">{{ $menu->mn_name }}</td>
+                                        <td class="sorting_1">ID: {{ $menu->mn_parent_id }}</td>
                                         <td class="sorting_1">
-                                            @if ($category->status == 1)
-                                                <a href="{{ route('product_category.active', $category->id) }}"
+                                            @if ($menu->mn_status == 1)
+                                                <a href="{{ route('menu.active', $menu->id) }}"
                                                     class="label label-info">Hoạt động</a>
                                             @else
-                                                <a href="{{ route('product_category.active', $category->id) }}"
+                                                <a href="{{ route('menu.active', $menu->id) }}"
                                                     class="label label-default">Không hoạt </a>
                                             @endif
                                         </td>
                                         <td>
-                                            <a href="{{ route('product_category.update', $category->id) }}"
+                                            <a href="{{ route('menu.update', $menu->id) }}"
                                                 class="btn btn-xs btn-primary"><i class="fa fa-pencil"></i>
                                                 Chỉnh sửa</a>
-                                            <a href="{{ route('product_category.delete', $category->id) }}"
+                                            <a href="{{ route('menu.delete', $menu->id) }}"
                                                 class="btn btn-xs btn-danger js-delete-confirm">
                                                 <i class="fa fa-trash"> </i> Xóa
                                             </a>
@@ -114,18 +108,18 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        <div class="row mx-2">
+                        {{-- <div class="row mx-2">
                             <div class="col-sm-12 col-md-6">
                                 <div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">
-                                    Showing {{ $prCategories->count() }} to {{ $prCategories->perPage() }} of
-                                    {{ $prCategories->total() }} entries</div>
+                                    Showing {{ $menus->count() }} to {{ $menus->perPage() }} of
+                                    {{ $menus->total() }} entries</div>
                             </div>
                             <div class="col-sm-12 col-md-6">
                                 <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate">
-                                    {!! $prCategories->appends($query)->links() !!}
+                                    {!! $menus->appends($query)->links() !!}
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         <br>
                     </div>
                 </div>

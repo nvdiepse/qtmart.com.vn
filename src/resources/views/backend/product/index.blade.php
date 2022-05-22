@@ -2,7 +2,6 @@
 
 @section('content')
     @include('layouts.admin.product.nav', ['optionNav' => 1])
-    @include('layouts.admin.product.slide')
 
     <br>
     <div class="row">
@@ -28,7 +27,7 @@
                 onclick="window.location='{{ route('product.create') }}'">
                 <span>
                     <i class="bx bx-plus me-md-2"></i>
-                    <span class="d-md-inline-block d-none">Tạo mới sản phẩm</span>
+                    <span class="d-md-inline-block d-none">Tạo mới </span>
                 </span>
             </button>
         </div>
@@ -132,7 +131,8 @@
                         <div class="row mx-2">
                             <div class="col-sm-12 col-md-6">
                                 <div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">
-                                    Showing {{ $products->count() }} to {{ $products->perPage() }} of {{ $products->total() }} entries</div>
+                                    Showing {{ $products->count() }} to {{ $products->perPage() }} of
+                                    {{ $products->total() }} entries</div>
                             </div>
                             <div class="col-sm-12 col-md-6">
                                 <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate">

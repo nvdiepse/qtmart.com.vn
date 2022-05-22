@@ -127,8 +127,8 @@
                 </a>
                 <ul class="pcoded-submenu">
                     <li class=" ">
-                        <a href="widget-statistic.htm">
-                            <span class="pcoded-mtext">Statistic</span>
+                        <a href="{{ route('blog.index') }}">
+                            <span class="pcoded-mtext">Tin tức</span>
                         </a>
                     </li>
                     <li class=" ">

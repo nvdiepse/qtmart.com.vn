@@ -14,10 +14,15 @@ class CreateModProductCategory extends Migration
     public function up()
     {
         Schema::create('mod_product_category', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->string('name');
+            $table->string('slug')->unique();
+            $table->string('image')->nullable();
+            $table->string('brand_id')->nullable();
+            $table->string('desc')->nullable();
             $table->string('code')->unique();
-            $table->tinyInteger('status')->default(0);
+            $table->tinyInteger('hot')->default(0);
+            $table->tinyInteger('status')->default(1);
             $table->integer('parent_id');
             $table->timestamps();
             $table->softDeletes();

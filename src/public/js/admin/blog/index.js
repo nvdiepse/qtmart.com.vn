@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -15210,10 +15210,10 @@ module.exports = g;
 
 /***/ }),
 
-/***/ "./resources/js/clients/home.js":
-/*!**************************************!*\
-  !*** ./resources/js/clients/home.js ***!
-  \**************************************/
+/***/ "./resources/js/admin/blog/index.js":
+/*!******************************************!*\
+  !*** ./resources/js/admin/blog/index.js ***!
+  \******************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -15229,67 +15229,61 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 var Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 
-var axios = __webpack_require__(/*! ../services/api */ "./resources/js/services/api.js");
+var axios = __webpack_require__(/*! ../../services/api */ "./resources/js/services/api.js");
+
+var baseUrl = __webpack_require__(/*! ../../constant/api/url */ "./resources/js/constant/api/url.js");
 
 var app = new Vue({
-  el: "#primary",
+  el: "#blogIndex",
   data: {
-    productDealsOfWeek: []
+    blogs: []
   },
   created: function created() {
-    var _this = this;
-
-    return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-        while (1) {
-          switch (_context.prev = _context.next) {
-            case 0:
-              _context.next = 2;
-              return _this.getProductDealsOfWeek();
-
-            case 2:
-            case "end":
-              return _context.stop();
-          }
-        }
-      }, _callee);
-    }))();
+    this.getBlog();
   },
   methods: {
-    getProductDealsOfWeek: function getProductDealsOfWeek() {
-      var _this2 = this;
+    getBlog: function getBlog() {
+      var _this = this;
 
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
-        var data;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+        var url;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
-            switch (_context2.prev = _context2.next) {
+            switch (_context.prev = _context.next) {
               case 0:
-                _context2.prev = 0;
-                _context2.next = 3;
-                return axios.getRequest();
+                try {
+                  url = baseUrl.blog_GET_ALL; // const data = await axios.getRequest(url);
 
-              case 3:
-                data = _context2.sent;
-                _this2.productDealsOfWeek = data.data;
-                _context2.next = 10;
-                break;
+                  _this.blogs = data.data;
+                } catch (e) {
+                  console.log("getBlog failed");
+                }
 
-              case 7:
-                _context2.prev = 7;
-                _context2.t0 = _context2["catch"](0);
-                console.log("getProductDealsOfWeek failed");
-
-              case 10:
+              case 1:
               case "end":
-                return _context2.stop();
+                return _context.stop();
             }
           }
-        }, _callee2, null, [[0, 7]]);
+        }, _callee);
       }))();
     }
   }
 });
+
+/***/ }),
+
+/***/ "./resources/js/constant/api/url.js":
+/*!******************************************!*\
+  !*** ./resources/js/constant/api/url.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var url = "http://127.0.0.1/";
+var PRODUCT_GET_ALL = url + "admin/product/get-data";
+module.exports = {
+  PRODUCT_GET_ALL: PRODUCT_GET_ALL
+};
 
 /***/ }),
 
@@ -15371,14 +15365,14 @@ var postRequest = /*#__PURE__*/function () {
 
 /***/ }),
 
-/***/ 1:
-/*!********************************************!*\
-  !*** multi ./resources/js/clients/home.js ***!
-  \********************************************/
+/***/ 5:
+/*!************************************************!*\
+  !*** multi ./resources/js/admin/blog/index.js ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\namlt\Desktop\qtmart.com.vn\src\resources\js\clients\home.js */"./resources/js/clients/home.js");
+module.exports = __webpack_require__(/*! C:\Users\namlt\Desktop\qtmart.com.vn\src\resources\js\admin\blog\index.js */"./resources/js/admin/blog/index.js");
 
 
 /***/ })

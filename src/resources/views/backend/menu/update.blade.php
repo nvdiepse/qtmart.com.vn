@@ -3,7 +3,6 @@
 @section('content')
     <div id="producUpdate">
         @include('layouts.admin.product.nav', ['optionNav' => 2])
-        @include('layouts.admin.product.slide')
 
         <br>
         <div class="row">
@@ -13,7 +12,7 @@
                         <li class="breadcrumb-item">
                             <a href="index-1.htm"> <i class="feather icon-home"></i></a>
                         </li>
-                        <li class="breadcrumb-item"><a href="#!">Danh mục sản phẩm</a>
+                        <li class="breadcrumb-item"><a href="{{ route('menu.index') }}">Danh sách menu</a>
                         </li>
                     </ul>
                 </div>
@@ -25,10 +24,10 @@
                 <!-- Product edit card start -->
                 <div class="card">
                     <div class="card-header">
-                        <h5>Cập nhập danh mục sản phẩm</h5>
+                        <h5>Cập nhập menu</h5>
                     </div>
                     <div class="card-block">
-                        <form action="{{ route('product_category.update', $prCategories->id) }}" method="post">
+                        <form action="{{ route('menu.update', $menu->id) }}" method="post">
                             @csrf
                             <div class="row">
                                 <div class="col-sm-12">
@@ -48,36 +47,23 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label">Tên danh mục (*)</label>
+                                        <label class="col-sm-2 col-form-label">Tên menu (*)</label>
                                         <div class="col-sm-10">
-                                            <input type="text" class="form-control" name="name" placeholder="Tên danh mục"
-                                                value="{{ $prCategories->name }}">
+                                            <input type="text" class="form-control" name="name" placeholder="Tên menu"
+                                                value="{{ $menu->mn_name }}">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label">Mã danh mục</label>
+                                        <label class="col-sm-2 col-form-label">Menu cha</label>
                                         <div class="col-sm-10">
-                                            <input type="text" class="form-control" name="code" placeholder="Mã danh mục"
-                                                value="{{ $prCategories->code }}">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label">Danh mục cha</label>
-                                        <div class="col-sm-10">
-                                            <select class="form-control" name="parent_id">
-                                                <option value="" readonly="true" hidden="true" selected>Chọn danh mục cha
-                                                </option>
-                                                <option value="1" {{ 1 === $prCategories->parent_id ? 'selected' : '' }}>
-                                                    Danh mục 1</option>
-                                                <option value="2" {{ 2 === $prCategories->parent_id ? 'selected' : '' }}>
-                                                    Danh
-                                                    mục 2</option>
-                                                <option value="3" {{ 3 === $prCategories->parent_id ? 'selected' : '' }}>
-                                                    Danh
-                                                    mục 3</option>
-                                                <option value="4" {{ 4 === $prCategories->parent_id ? 'selected' : '' }}>
-                                                    Danh
-                                                    mục 4</option>
+                                            <select class="form-control" name="mn_parent_id">
+                                                {{-- <option value="" readonly="true" hidden="true" selected>Chọn danh mục cha
+                                                </option> --}}
+                                                @foreach ($menus as $item)
+                                                    <option
+                                                        value="{{ $item->mn_parent_id }} {{ $menu->id === $item->mn_parent_id ? 'selected' : '' }}">
+                                                        {{ $item->mn_name }}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                     </div>
@@ -86,16 +72,18 @@
                                         <div class="col-sm-10">
                                             <div class="form-check form-check-inline">
                                                 <label class="form-check-label">
-                                                    <input class="form-check-input" type="radio" name="status" id="gender-1"
-                                                        value="1" {{ $prCategories->status === 1 ? 'checked' : '' }}>
+                                                    <input class="form-check-input" type="radio" name="mn_status"
+                                                        id="gender-1" value="1"
+                                                        {{ $menu->mn_status === 1 ? 'checked' : '' }}>
                                                     Hoạt
                                                     động
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <label class="form-check-label">
-                                                    <input class="form-check-input" type="radio" name="status" id="gender-2"
-                                                        value="0" {{ $prCategories->status === 0 ? 'checked' : '' }}>
+                                                    <input class="form-check-input" type="radio" name="mn_status"
+                                                        id="gender-2" value="0"
+                                                        {{ $menu->mn_status === 0 ? 'checked' : '' }}>
                                                     Không
                                                     hoạt động
                                                 </label>

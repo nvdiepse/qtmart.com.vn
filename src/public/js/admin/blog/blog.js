@@ -81,15 +81,15 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/admin/product/product.js":
-/*!***********************************************!*\
-  !*** ./resources/js/admin/product/product.js ***!
-  \***********************************************/
+/***/ "./resources/js/admin/blog/blog.js":
+/*!*****************************************!*\
+  !*** ./resources/js/admin/blog/blog.js ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -105,7 +105,7 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-window.previewImageProduct = function (event) {
+window.previewImageBroduct = function (event) {
   console.log(event.files);
 
   var _event$files = _slicedToArray(event.files, 1),
@@ -118,14 +118,14 @@ window.previewImageProduct = function (event) {
 
 /***/ }),
 
-/***/ 4:
-/*!*****************************************************!*\
-  !*** multi ./resources/js/admin/product/product.js ***!
-  \*****************************************************/
+/***/ 7:
+/*!***********************************************!*\
+  !*** multi ./resources/js/admin/blog/blog.js ***!
+  \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\namlt\Desktop\qtmart.com.vn\src\resources\js\admin\product\product.js */"./resources/js/admin/product/product.js");
+module.exports = __webpack_require__(/*! C:\Users\namlt\Desktop\qtmart.com.vn\src\resources\js\admin\blog\blog.js */"./resources/js/admin/blog/blog.js");
 
 
 /***/ })
