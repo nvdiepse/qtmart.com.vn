@@ -62,7 +62,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('/store', 'Admin\ArticleController@store')->name("blog.store");
 
         Route::get('/active/{id}', 'Admin\ArticleController@active')->name('blog.active');
-        Route::get('/delete/{id}', 'Admin\ArticleControllerr@delete')->name('blog.delete');
+        Route::get('/delete/{id}', 'Admin\ArticleController@delete')->name('blog.delete');
 
         Route::get('update/{id}', 'Admin\ArticleController@edit')->name('blog.update');
         Route::post('update/{id}', 'Admin\ArticleController@update');

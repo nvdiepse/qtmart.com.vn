@@ -36,7 +36,7 @@ class ProductController extends Controller
         return view('backend.product.create', ['proCategories' => $proCategories]);
     }
 
-    public function store(StoreRequest $request)
+    public function store(UpdateRequest $request)
     {
         $data = $request->except('_token', 'image');
 
@@ -59,13 +59,13 @@ class ProductController extends Controller
             return redirect()->route('product.index');
         } catch (Exception $e) {
             DB::rollBack();
+            dd($e);
             report($e);
         }
     }
 
     public function update(UpdateRequest $request, $id)
     {
-        // dd($request->all());
         try {
             DB::beginTransaction();
             $data = $request->except('_token', 'file');
@@ -85,7 +85,6 @@ class ProductController extends Controller
             return redirect()->route('product.index');
         } catch (Exception $e) {
             DB::rollBack();
-            dd($e);
             report($e);
         }
     }

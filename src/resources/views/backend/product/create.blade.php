@@ -84,6 +84,11 @@
                                                             <div class="col-sm-10">
                                                                 <input type="text" class="form-control" id="product_name"
                                                                     name="name">
+                                                                @if ($errors->has('name'))
+                                                                    <span class="invalid feedback text-danger" role="alert">
+                                                                        <strong>{{ $errors->first('name') }}.</strong>
+                                                                    </span>
+                                                                @endif
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
@@ -114,6 +119,22 @@
                                                                 <input type="text" class="form-control" id="unit"
                                                                     name="product_unit"
                                                                     placeholder="Vd: Cái, Chiếc, Lọ ...">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label class="col-sm-2 col-form-label" for="price_entry">Giá
+                                                                nhập</label>
+                                                            <div class="col-sm-10">
+                                                                <input type="text" class="form-control" id="price_entry"
+                                                                    name="price_entry" placeholder="VNĐ...">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label class="col-sm-2 col-form-label" for="price">Giá
+                                                                bán</label>
+                                                            <div class="col-sm-10">
+                                                                <input type="text" class="form-control" id="price"
+                                                                    name="price" placeholder="VNĐ...">
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
@@ -170,6 +191,8 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-sm-12">
+                                                        <label class="col-sm-2 col-form-label" for="summary-ckeditor">Nội
+                                                            dung</label>
                                                         <textarea class="form-control" id="summary-ckeditor" name="content"></textarea>
                                                     </div>
                                                 </div>

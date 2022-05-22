@@ -116,18 +116,34 @@ class ArticleController extends Controller
 
     public function active($id)
     {
-        $article = $this->articleService->findById($id);
-        $article->pa_status = !$article->pa_status;
-        $article->save();
+        try {
+            DB::beginTransaction();
 
-        return redirect()->back();
+            $article = $this->articleService->findById($id);
+            $article->pa_status = !$article->pa_status;
+            $article->save();
+
+            DB::commit();
+            return redirect()->back();
+        } catch (Exception $e) {
+            DB::rollBack();
+            report($e);
+        }
     }
 
     public function delete($id)
     {
-        $product = $this->productService->findById($id);
-        if ($product) $product->delete();
+        try {
+            DB::beginTransaction();
 
-        return redirect()->back();
+            $article = $this->articleService->findById($id);
+            if ($article) $article->delete();
+
+            DB::commit();
+            return redirect()->back();
+        } catch (Exception $e) {
+            DB::rollBack();
+            report($e);
+        }
     }
 }

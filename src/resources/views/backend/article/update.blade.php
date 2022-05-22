@@ -2,6 +2,7 @@
 
 @section('content')
     <div id="producCreate">
+        @include('layouts.admin.blog.nav', ['optionNav' => 1])
         <br>
         <div class="row">
             <div class="col-lg-12">
@@ -11,10 +12,10 @@
                             <a href="index-1.htm"> <i class="feather icon-home"></i> </a>
                         </li>
                         <li class="breadcrumb-item">
-                            <a href="#!">blog</a>
+                            <a href="#!">Blog</a>
                         </li>
                         <li class="breadcrumb-item">
-                            <a href="#!">Tạo mới blog</a>
+                            <a href="#!">Cập nhập blog</a>
                         </li>
                     </ul>
                 </div>
@@ -26,7 +27,7 @@
                 <!-- blog edit card start -->
                 <div class="card">
                     <div class="card-header">
-                        <h5>Tạo mới blog</h5>
+                        <h5>Cập nhập blog</h5>
                     </div>
                     <div class="card-block">
                         <div class="row">
@@ -56,7 +57,7 @@
                                                                 blog (*)</label>
                                                             <div class="col-sm-10">
                                                                 <input type="text" class="form-control" id="name"
-                                                                    name="pa_name">
+                                                                    name="pa_name" value="{{ $article->pa_name }}">
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
@@ -75,7 +76,8 @@
                                                         <div class="form-group row">
                                                             <label class="col-sm-2 col-form-label" for="desc">Mô tả </label>
                                                             <div class="col-sm-10">
-                                                                <textarea rows="5" cols="5" class="form-control" placeholder="Default textarea" id="desc" name="pa_desc"></textarea>
+                                                                <textarea rows="5" cols="5" class="form-control" placeholder="Default textarea" id="desc"
+                                                                    name="pa_desc">{{ $article->desc }}</textarea>
                                                             </div>
                                                         </div>
                                                         <hr>
@@ -88,7 +90,8 @@
                                                                 <div class="form-check form-check-inline">
                                                                     <label class="form-check-label">
                                                                         <input class="form-check-input" type="radio"
-                                                                            name="pa_status" id="gender-1" value="1">
+                                                                            name="pa_status" id="gender-1" value="1"
+                                                                            {{ $article->pa_status === 1 ? 'checked' : '' }}>
                                                                         Hoạt
                                                                         động
                                                                     </label>
@@ -96,7 +99,8 @@
                                                                 <div class="form-check form-check-inline">
                                                                     <label class="form-check-label">
                                                                         <input class="form-check-input" type="radio"
-                                                                            name="pa_status" id="gender-2" value="0">
+                                                                            name="pa_status" id="gender-2" value="0"
+                                                                            {{ $article->pa_status === 0 ? 'checked' : '' }}>
                                                                         Không
                                                                         hoạt động
                                                                     </label>
@@ -127,7 +131,7 @@
                                                     <div class="col-sm-12">
                                                         <label class="col-sm-2 col-form-label" for="summary-ckeditor">Nội
                                                             dung </label>
-                                                        <textarea class="form-control" id="summary-ckeditor" name="pa_content"></textarea>
+                                                        <textarea class="form-control" id="summary-ckeditor" name="pa_content">{{ $article->pa_content }}</textarea>
                                                     </div>
                                                 </div>
                                             </div>

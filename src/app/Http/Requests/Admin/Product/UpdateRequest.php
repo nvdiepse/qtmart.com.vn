@@ -24,7 +24,18 @@ class UpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name'          => 'required|max:190|min:3',
+            'price'         => 'required',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'name.required'         => 'Tên sản phẩm không được để trống',
+            'name.min'              => 'Tên sản phẩm ngắn',
+            'name.max'              => 'Tên sản phẩm dài',
+            'price.required'        => 'Giá sản phẩm không được để trống',
         ];
     }
 }
