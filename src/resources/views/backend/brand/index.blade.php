@@ -99,7 +99,7 @@
                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
                                         colspan="1" style="width: 109px;"
                                         aria-label="Total: activate to sort column ascending">
-                                        Hành động</th>
+                                        Thao tác</th>
 
                                 </tr>
                             </thead>

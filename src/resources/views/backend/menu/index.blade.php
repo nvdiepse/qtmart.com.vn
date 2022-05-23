@@ -77,7 +77,7 @@
                                     </th>
                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
                                         colspan="1" aria-label="Total: activate to sort column ascending">
-                                        Hành động
+                                        Thao tác
                                     </th>
                                 </tr>
                             </thead>

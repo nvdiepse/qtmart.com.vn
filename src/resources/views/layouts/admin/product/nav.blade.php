@@ -9,7 +9,7 @@
         <li class="nav-item">
             <a class="nav-link {{ $optionNav === 2 ? 'active' : '' }}" data-toggle=""
                 href="{{ route('product_category.index') }}" role="tab">Danh mục
-                sảm phẩm</a>
+                sản phẩm</a>
             <div class="slide"></div>
         </li>
         <li class="nav-item" {{ $optionNav === 3 ? 'active' : '' }}>

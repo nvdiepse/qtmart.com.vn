@@ -75,6 +75,7 @@ class MenuController extends Controller
     {
         try {
             DB::beginTransaction();
+
             $data = $request->except('_token',);
             $data['mn_slug']     = Str::slug($request->mn_name) . '-' . $request->id;
             $data['updated_at'] = Carbon::now();
@@ -104,6 +105,8 @@ class MenuController extends Controller
             DB::beginTransaction();
             $this->menuService->deleteById($id);
             DB::commit();
+
+            return redirect()->back();
         } catch (Exception $e) {
             DB::rollBack();
             report($e);

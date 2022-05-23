@@ -16,7 +16,7 @@ class CreateModProductCategory extends Migration
         Schema::create('mod_product_category', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('slug')->unique();
+            $table->string('slug')->unique()->nullable();
             $table->string('image')->nullable();
             $table->string('brand_id')->nullable();
             $table->string('desc')->nullable();

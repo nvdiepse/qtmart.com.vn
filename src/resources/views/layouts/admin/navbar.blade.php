@@ -131,17 +131,6 @@
                             <span class="pcoded-mtext">Tin tức</span>
                         </a>
                     </li>
-                    <li class=" ">
-                        <a href="widget-data.htm">
-                            <span class="pcoded-mtext">Data</span>
-                        </a>
-                    </li>
-                    <li class=" ">
-                        <a href="widget-chart.htm">
-                            <span class="pcoded-mtext">Chart Widget</span>
-                        </a>
-                    </li>
-
                 </ul>
             </li>
         </ul>

@@ -3,7 +3,6 @@
 @section('content')
     <div id="producCreate">
         @include('layouts.admin.product.nav', ['optionNav' => 2])
-        @include('layouts.admin.product.slide')
 
         <br>
         <div class="row">
@@ -72,6 +71,12 @@
                                                 <option value="4">Danh mục 4</option>
                                             </select>
                                         </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="file-upload-wrapper">
+                                            <input type="file" id="input-file-now" class="file-upload" />
+                                        </div>
+
                                     </div>
                                     <div class="form-group row">
                                         <label class="col-sm-2 col-form-label">Trạng thái</label>

@@ -28,7 +28,7 @@
                         <h5>Cập nhập danh mục sản phẩm</h5>
                     </div>
                     <div class="card-block">
-                        <form action="{{ route('product_category.update', $prCategories->id) }}" method="post">
+                        <form action="{{ route('product_category.update', $categories->id) }}" method="post">
                             @csrf
                             <div class="row">
                                 <div class="col-sm-12">
@@ -51,14 +51,14 @@
                                         <label class="col-sm-2 col-form-label">Tên danh mục (*)</label>
                                         <div class="col-sm-10">
                                             <input type="text" class="form-control" name="name" placeholder="Tên danh mục"
-                                                value="{{ $prCategories->name }}">
+                                                value="{{ $categories->name }}">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label class="col-sm-2 col-form-label">Mã danh mục</label>
                                         <div class="col-sm-10">
                                             <input type="text" class="form-control" name="code" placeholder="Mã danh mục"
-                                                value="{{ $prCategories->code }}">
+                                                value="{{ $categories->code }}">
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -67,15 +67,15 @@
                                             <select class="form-control" name="parent_id">
                                                 <option value="" readonly="true" hidden="true" selected>Chọn danh mục cha
                                                 </option>
-                                                <option value="1" {{ 1 === $prCategories->parent_id ? 'selected' : '' }}>
+                                                <option value="1" {{ 1 === $categories->parent_id ? 'selected' : '' }}>
                                                     Danh mục 1</option>
-                                                <option value="2" {{ 2 === $prCategories->parent_id ? 'selected' : '' }}>
+                                                <option value="2" {{ 2 === $categories->parent_id ? 'selected' : '' }}>
                                                     Danh
                                                     mục 2</option>
-                                                <option value="3" {{ 3 === $prCategories->parent_id ? 'selected' : '' }}>
+                                                <option value="3" {{ 3 === $categories->parent_id ? 'selected' : '' }}>
                                                     Danh
                                                     mục 3</option>
-                                                <option value="4" {{ 4 === $prCategories->parent_id ? 'selected' : '' }}>
+                                                <option value="4" {{ 4 === $categories->parent_id ? 'selected' : '' }}>
                                                     Danh
                                                     mục 4</option>
                                             </select>
@@ -87,7 +87,7 @@
                                             <div class="form-check form-check-inline">
                                                 <label class="form-check-label">
                                                     <input class="form-check-input" type="radio" name="status" id="gender-1"
-                                                        value="1" {{ $prCategories->status === 1 ? 'checked' : '' }}>
+                                                        value="1" {{ $categories->status === 1 ? 'checked' : '' }}>
                                                     Hoạt
                                                     động
                                                 </label>
@@ -95,7 +95,7 @@
                                             <div class="form-check form-check-inline">
                                                 <label class="form-check-label">
                                                     <input class="form-check-input" type="radio" name="status" id="gender-2"
-                                                        value="0" {{ $prCategories->status === 0 ? 'checked' : '' }}>
+                                                        value="0" {{ $categories->status === 0 ? 'checked' : '' }}>
                                                     Không
                                                     hoạt động
                                                 </label>

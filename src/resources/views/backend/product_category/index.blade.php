@@ -63,6 +63,11 @@
                             id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
                             <thead>
                                 <tr role="row">
+                                    <th><input type="checkbox" value="" id="flexCheckDefault"></th>
+                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                                        colspan="1" aria-label=": activate to sort column ascending">
+                                        Ảnh
+                                    </th>
                                     <th class="control sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
                                         colspan="1" aria-label=": activate to sort column ascending">
                                         Tên danh mục
@@ -73,32 +78,30 @@
                                         Mã danh mục
                                     </th>
                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
-                                        colspan="1" aria-label=": activate to sort column ascending">
-                                        Danh mục cha
-                                    </th>
-                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
                                         colspan="1" aria-label="Client: activate to sort column ascending">
                                         Trạng thái
                                     </th>
                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
                                         colspan="1" aria-label="Total: activate to sort column ascending">
-                                        Hành động
+                                        Thao tác
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($prCategories as $category)
                                     <tr class="odd">
+                                        <td><input type="checkbox" value="" id="flexCheckDefault">
+                                        </td>
+                                        <td class="sorting_1">Image</td>
                                         <td class="sorting_1">{{ $category->name }}</td>
                                         <td class="sorting_1">{{ $category->code }}</td>
-                                        <td class="sorting_1">ID: {{ $category->parent_id }} (pendding)</td>
                                         <td class="sorting_1">
                                             @if ($category->status == 1)
                                                 <a href="{{ route('product_category.active', $category->id) }}"
                                                     class="label label-info">Hoạt động</a>
                                             @else
                                                 <a href="{{ route('product_category.active', $category->id) }}"
-                                                    class="label label-default">Không hoạt </a>
+                                                    class="label label-danger">Không hoạt động</a>
                                             @endif
                                         </td>
                                         <td>
