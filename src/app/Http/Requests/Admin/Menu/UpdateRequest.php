@@ -24,7 +24,16 @@ class UpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'mn.name'          => 'required|max:190|min:3',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'mn.name.required'         => 'Tên menu không được để trống',
+            'mn.name.min'              => 'Tên menu ngắn',
+            'mn.name.max'              => 'Tên menu dài',
         ];
     }
 }

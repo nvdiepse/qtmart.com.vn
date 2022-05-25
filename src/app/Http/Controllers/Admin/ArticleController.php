@@ -47,7 +47,7 @@ class ArticleController extends Controller
         return view('backend.article.create', $dataView);
     }
 
-    public function store(StoreRequest $request)
+    public function store(UpdateRequest $request)
     {
         $data = $request->except('_token', 'image');
 
@@ -76,10 +76,9 @@ class ArticleController extends Controller
 
     public function update(UpdateRequest $request, $id)
     {
-        dd($request->all());
+        $data = $request->except('_token', 'file');
         try {
             DB::beginTransaction();
-            $data = $request->except('_token', 'file');
 
             $data['slug']  = Str::slug($request->name);
             $data['updated_at'] = Carbon::now();

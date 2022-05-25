@@ -10,7 +10,6 @@ use App\Services\MenuService;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Menu\CreateRequest;
-use App\Http\Requests\Admin\Menu\DeleteRequest;
 use App\Http\Requests\Admin\Menu\UpdateRequest;
 
 class MenuController extends Controller

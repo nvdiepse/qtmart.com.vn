@@ -84,11 +84,7 @@
                                                             <div class="col-sm-10">
                                                                 <input type="text" class="form-control" id="product_name"
                                                                     name="name">
-                                                                @if ($errors->has('name'))
-                                                                    <span class="invalid feedback text-danger" role="alert">
-                                                                        <strong>{{ $errors->first('name') }}.</strong>
-                                                                    </span>
-                                                                @endif
+                                                                @include('layouts.admin.error', ['name' => 'name'])
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
@@ -97,6 +93,7 @@
                                                             <div class="col-sm-10">
                                                                 <input type="text" id="code" class="form-control"
                                                                     name="code" placeholder="Tự động tạo mã">
+                                                                @include('layouts.admin.error', ['name' => 'code'])
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
@@ -127,6 +124,7 @@
                                                             <div class="col-sm-10">
                                                                 <input type="text" class="form-control" id="price_entry"
                                                                     name="price_entry" placeholder="VNĐ...">
+                                                                @include('layouts.admin.error', ['name' => 'price_entry'])
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
@@ -135,6 +133,7 @@
                                                             <div class="col-sm-10">
                                                                 <input type="text" class="form-control" id="price"
                                                                     name="price" placeholder="VNĐ...">
+                                                                @include('layouts.admin.error', ['name' => 'price'])
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">

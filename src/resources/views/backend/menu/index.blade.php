@@ -92,7 +92,7 @@
                                                     class="label label-info">Hoạt động</a>
                                             @else
                                                 <a href="{{ route('menu.active', $menu->id) }}"
-                                                    class="label label-default">Không hoạt </a>
+                                                    class="label label-danger">Không hoạt </a>
                                             @endif
                                         </td>
                                         <td>

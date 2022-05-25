@@ -24,17 +24,16 @@ class CreateRequest extends FormRequest
     public function rules()
     {
         return [
-            'mn_name' => 'required',
+            'mn.name'          => 'required|max:190|min:3',
         ];
     }
 
     public function messages()
     {
         return [
-            'mn_name.required'   => 'Dữ liệu không được để trống',
-            'mn_name.unique'     => 'Dữ liệu đã tồn tại',
-            'mn_name.max'        => 'Dữ liệu không quá 190 ký tự',
-            'mn_name.min'        => 'Dữ liệu phải nhiều hơn 3 ký tự',
+            'mn.name.required'         => 'Tên menu không được để trống',
+            'mn.name.min'              => 'Tên menu ngắn',
+            'mn.name.max'              => 'Tên menu dài',
         ];
     }
 }

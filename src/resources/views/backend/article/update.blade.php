@@ -58,6 +58,7 @@
                                                             <div class="col-sm-10">
                                                                 <input type="text" class="form-control" id="name"
                                                                     name="pa_name" value="{{ $article->pa_name }}">
+                                                                @include('layouts.admin.error', ['name' => 'pa_name'])
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">

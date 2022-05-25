@@ -24,7 +24,16 @@ class UpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'pa_name'          => 'required|max:190|min:3',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'pa_name.required'         => 'Tên article không được để trống',
+            'pa_name.min'              => 'Tên article ngắn',
+            'pa_name.max'              => 'Tên article dài',
         ];
     }
 }
