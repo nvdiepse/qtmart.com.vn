@@ -92,7 +92,8 @@
                                     <tr class="odd">
                                         <td><input type="checkbox" value="" id="flexCheckDefault">
                                         </td>
-                                        <td class="sorting_1">Image</td>
+                                        <td class="sorting_1"><img src="{{ pare_url_file($category->image) }}"
+                                                style="width: 80px;height: 100px"></td>
                                         <td class="sorting_1">{{ $category->name }}</td>
                                         <td class="sorting_1">{{ $category->code }}</td>
                                         <td class="sorting_1">

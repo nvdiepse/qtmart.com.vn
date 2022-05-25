@@ -56,9 +56,11 @@
                                             <select class="form-control" name="parent_id">
                                                 <option value="" readonly="true" hidden="true" selected>Chọn danh mục cha
                                                 </option>
-                                                @foreach ($menus as $menu)
-                                                    <option value="{{ $menu->id }}"> {{ $menu->mn_name }}</option>
-                                                @endforeach
+                                                @if ($menus)
+                                                    @foreach ($menus as $menu)
+                                                        <option value="{{ $menu->id }}"> {{ $menu->mn_name }}</option>
+                                                    @endforeach
+                                                @endif
                                             </select>
                                         </div>
                                     </div>

@@ -23,7 +23,7 @@ class CreateModProductCategory extends Migration
             $table->string('code')->unique();
             $table->tinyInteger('hot')->default(0);
             $table->tinyInteger('status')->default(1);
-            $table->integer('parent_id');
+            $table->integer('parent_id')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
