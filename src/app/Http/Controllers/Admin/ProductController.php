@@ -38,11 +38,10 @@ class ProductController extends Controller
 
     public function store(UpdateRequest $request)
     {
-        $data = $request->except('_token', 'image');
+        $data = $request->except('_token');
 
         try {
             DB::beginTransaction();
-            $data['slug'] = Str::slug($data['name']);
             $data['brand_id'] = 1;
             $data['created_at'] = Carbon::now();
 
@@ -53,24 +52,24 @@ class ProductController extends Controller
                     $data['image'] = $image['name'];
             }
 
-            $this->productService->store($data);
+            $product = $this->productService->store($data);
+            $product->slug = Str::slug($request->name) . '-' . $product->id;
+            $product->save();
 
             DB::commit();
             return redirect()->route('product.index');
         } catch (Exception $e) {
             DB::rollBack();
-            dd($e);
             report($e);
         }
     }
 
     public function update(UpdateRequest $request, $id)
     {
+        $data = $request->except('_token');
         try {
             DB::beginTransaction();
-            $data = $request->except('_token', 'file');
 
-            $data['slug']  = Str::slug($request->name);
             $data['updated_at'] = Carbon::now();
 
             if ($request->image) {
@@ -79,7 +78,9 @@ class ProductController extends Controller
                     $data['image'] = $image['name'];
             }
 
-            $this->productService->update($id, $data);
+            $product = $this->productService->update($id, $data);
+            $product->slug = Str::slug($request->name) . '-' . $product->id;
+            $product->save();
 
             DB::commit();
             return redirect()->route('product.index');

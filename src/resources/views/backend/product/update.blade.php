@@ -119,6 +119,24 @@
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
+                                                            <label class="col-sm-2 col-form-label" for="price_entry">Giá
+                                                                nhập</label>
+                                                            <div class="col-sm-10">
+                                                                <input type="text" class="form-control" id="price_entry"
+                                                                    name="price_entry" placeholder="VNĐ...">
+                                                                @include('layouts.admin.error', ['name' => 'price_entry'])
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label class="col-sm-2 col-form-label" for="price">Giá
+                                                                bán</label>
+                                                            <div class="col-sm-10">
+                                                                <input type="text" class="form-control" id="price"
+                                                                    name="price" placeholder="VNĐ...">
+                                                                @include('layouts.admin.error', ['name' => 'price'])
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
                                                             <label class="col-sm-2 col-form-label" for="desc">Mô tả sản
                                                                 phẩm</label>
                                                             <div class="col-sm-10">

@@ -27,7 +27,7 @@
                         <h5>Tạo mới</h5>
                     </div>
                     <div class="card-block">
-                        <form action="{{ route('product_category.store') }}" method="post">
+                        <form action="{{ route('product_category.store') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="col-sm-6">

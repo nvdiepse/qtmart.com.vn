@@ -26,7 +26,8 @@
                         <h5>Cập nhập danh mục sản phẩm</h5>
                     </div>
                     <div class="card-block">
-                        <form action="{{ route('product_category.update', $category->id) }}" method="post">
+                        <form action="{{ route('product_category.update', $category->id) }}" method="post"
+                            enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="col-sm-6">

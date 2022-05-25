@@ -45,7 +45,7 @@ class ProductCategoryController extends Controller
 
     public function store(CreateRequest $request)
     {
-        $data = $request->except('_token', 'image');
+        $data = $request->except('_token');
 
         try {
             DB::beginTransaction();
@@ -86,7 +86,7 @@ class ProductCategoryController extends Controller
     {
         try {
             DB::beginTransaction();
-            $data = $request->except('_token', 'image');
+            $data = $request->except('_token');
 
             $data['updated_at'] = Carbon::now();
 

@@ -49,17 +49,17 @@ class ArticleController extends Controller
 
     public function store(UpdateRequest $request)
     {
-        $data = $request->except('_token', 'image');
+        $data = $request->except('_token');
 
         try {
             $data['brand_id'] = 1;
             $data['created_at'] = Carbon::now();
 
 
-            if ($request->image) {
-                $image = upload_image('image');
+            if ($request->pa_image) {
+                $image = upload_image('pa_image');
                 if ($image['code'] == 1)
-                    $data['image'] = $image['name'];
+                    $data['pa_image'] = $image['name'];
             }
 
             $article = $this->articleService->store($data);
@@ -80,22 +80,22 @@ class ArticleController extends Controller
         try {
             DB::beginTransaction();
 
-            $data['slug']  = Str::slug($request->name);
             $data['updated_at'] = Carbon::now();
 
-            if ($request->image) {
-                $image = upload_image('image');
+            if ($request->pa_image) {
+                $image = upload_image('pa_image');
                 if ($image['code'] == 1)
-                    $data['image'] = $image['name'];
+                    $data['pa_image'] = $image['name'];
             }
 
-            $this->productService->update($id, $data);
+            $article = $this->productService->update($id, $data);
+            $article->pa_slug = Str::slug($request->pa_name) . '-' . $article->id;
+            $article->save();
 
             DB::commit();
             return redirect()->route('blog.index');
         } catch (Exception $e) {
             DB::rollBack();
-            dd($e);
             report($e);
         }
     }

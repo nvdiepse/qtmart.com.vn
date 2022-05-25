@@ -37,6 +37,6 @@ class ProductRepository extends BaseRepository
 
     public function getProducts()
     {
-        return $this->model->orderByDesc('id')->paginate(1);
+        return $this->model->orderByDesc('id')->paginate(10);
     }
 }
