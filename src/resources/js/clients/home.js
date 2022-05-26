@@ -1,22 +1,22 @@
 const Vue = require('vue');
-const axios = require('../services/api');
+// const axios = require('../services/api');
 var app = new Vue({
-    el: "#primary",
+    el: "#homePage",
     data: {
-        productDealsOfWeek: [],
+        // productDealsOfWeek: [],
     },
-
     async created() {
-        await this.getProductDealsOfWeek();
+        // await this.getProductDealsOfWeek();
     },
     methods: {
-        async getProductDealsOfWeek() {
-            try {
-                const data = await axios.getRequest();
-                this.productDealsOfWeek = data.data;
-            } catch (e) {
-                console.log(`getProductDealsOfWeek failed`);
-            }
-        }
+        // async getProductDealsOfWeek() {
+        //     console.log('getProductDealsOfWeek');
+        //     // try {
+        //     //     const data = await axios.getRequest();
+        //     //     this.productDealsOfWeek = data.data;
+        //     // } catch (e) {
+        //     //     console.log(`getProductDealsOfWeek failed`);
+        //     // }
+        // }
     }
 });

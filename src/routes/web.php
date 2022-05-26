@@ -32,6 +32,12 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('/store', 'Admin\ProductCategoryController@store')->name("product_category.create");
     });
 
+    Route::group(['prefix' => 'slider'], function () {
+        Route::get('/', 'Admin\SliderController@index');
+        Route::get('/create', 'Admin\SliderController@create');
+        Route::post('/store', 'Admin\SliderController@store')->name("product_category.create");
+    });
+
     Route::group(['prefix' => 'brand'], function () {
         Route::get('/', 'Admin\BrandController@index')->name("brand.index");
         Route::get('/create', 'Admin\BrandController@create');
