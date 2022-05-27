@@ -34,4 +34,9 @@ class ProductRepository extends BaseRepository
         return "";
         // return $this->model->where('slug', $slug)->first();
     }
+
+    public function getProducts()
+    {
+        return $this->model->orderByDesc('id')->paginate(10);
+    }
 }

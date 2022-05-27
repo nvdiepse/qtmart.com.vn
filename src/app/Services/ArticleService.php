@@ -19,8 +19,7 @@ class ArticleService
      */
     public function __construct(
         ArticleRepository $articleRepository
-    )
-    {
+    ) {
         $this->articleRepository = $articleRepository;
     }
 
@@ -56,5 +55,14 @@ class ArticleService
     public function delete($id)
     {
         return $this->articleRepository->delete($id);
+    }
+
+    /**
+     * @param $id
+     * @return mixed
+     */
+    public function findById($id)
+    {
+        return $this->articleRepository->findOne($id);
     }
 }

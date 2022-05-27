@@ -31,6 +31,7 @@ class CreateModOrder extends Migration
             $table->double('total_origin');
             $table->double('total_import');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -14,7 +14,7 @@
                         </a>
                     </li>
                     <li class="">
-                        <a href="dashboard-crm.htm">
+                        <a href="{{ route('product.index') }}">
                             <span class="pcoded-mtext">Sản phẩm</span>
                         </a>
                     </li>
@@ -127,21 +127,10 @@
                 </a>
                 <ul class="pcoded-submenu">
                     <li class=" ">
-                        <a href="widget-statistic.htm">
-                            <span class="pcoded-mtext">Statistic</span>
+                        <a href="{{ route('blog.index') }}">
+                            <span class="pcoded-mtext">Tin tức</span>
                         </a>
                     </li>
-                    <li class=" ">
-                        <a href="widget-data.htm">
-                            <span class="pcoded-mtext">Data</span>
-                        </a>
-                    </li>
-                    <li class=" ">
-                        <a href="widget-chart.htm">
-                            <span class="pcoded-mtext">Chart Widget</span>
-                        </a>
-                    </li>
-
                 </ul>
             </li>
         </ul>

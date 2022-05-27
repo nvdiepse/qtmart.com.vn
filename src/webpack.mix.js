@@ -20,3 +20,6 @@ mix.js('resources/js/admin/product/create.js', 'public/js/admin/product');
 mix.js('resources/js/admin/order/create.js', 'public/js/admin/order');
 mix.js('resources/js/admin/product/product.js', 'public/js/admin/product');
 
+mix.js('resources/js/admin/blog/index.js', 'public/js/admin/blog');
+mix.js('resources/js/admin/blog/create.js', 'public/js/admin/blog');
+mix.js('resources/js/admin/blog/blog.js', 'public/js/admin/blog');

@@ -19,6 +19,7 @@ class CreateModBrand extends Migration
             $table->string('code');
             $table->integer('status');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

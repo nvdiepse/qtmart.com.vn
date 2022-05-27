@@ -21,6 +21,7 @@ class CreateModCustomer extends Migration
             $table->string("cell_phone");
             $table->string("email");
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

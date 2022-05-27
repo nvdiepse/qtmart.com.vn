@@ -15367,7 +15367,7 @@ var postRequest = /*#__PURE__*/function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/ngogiadiep/Desktop/Development/PHP/qtmart.com.vn/src/resources/js/admin/product/create.js */"./resources/js/admin/product/create.js");
+module.exports = __webpack_require__(/*! C:\Users\namlt\Desktop\qtmart.com.vn\src\resources\js\admin\product\create.js */"./resources/js/admin/product/create.js");
 
 
 /***/ })

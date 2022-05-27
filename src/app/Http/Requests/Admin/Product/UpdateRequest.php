@@ -13,7 +13,7 @@ class UpdateRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,22 @@ class UpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name'          => 'required|max:190|min:3',
+            'code'         => 'required',
+            'price'         => 'required',
+            'price_entry'         => 'required',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'name.required'         => 'Tên sản phẩm không được để trống',
+            'name.min'              => 'Tên sản phẩm ngắn',
+            'name.max'              => 'Tên sản phẩm dài',
+            'code.required'        => 'Mã sản phẩm không được để trống',
+            'price.required'        => 'Giá sản phẩm không được để trống',
+            'price_entry.required'        => 'Giá nhập sản phẩm không được để trống',
         ];
     }
 }

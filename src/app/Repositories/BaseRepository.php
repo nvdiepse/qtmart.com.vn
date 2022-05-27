@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Repositories;
+
 use Illuminate\Contracts\Container\BindingResolutionException;
 
 /**
@@ -78,7 +80,7 @@ abstract class BaseRepository
      */
     public function update($id, array $attributes = [])
     {
-        $result = $this->find($id);
+        $result = $this->model->find($id);
         if ($result) {
             $result->update($attributes);
             return $result;

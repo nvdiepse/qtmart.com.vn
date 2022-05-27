@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Exception;
+use Carbon\Carbon;
+use Illuminate\Support\Str;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\Services\ProductCategoryService;
 use App\Http\Requests\Admin\ProductCategory\CreateRequest;
 use App\Http\Requests\Admin\ProductCategory\DeleteRequest;
 use App\Http\Requests\Admin\ProductCategory\UpdateRequest;
-use App\Services\ProductCategoryService;
-use Exception;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class ProductCategoryController extends Controller
 {
@@ -20,65 +22,113 @@ class ProductCategoryController extends Controller
         $this->productCategoryService = $productCategoryService;
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        return view('backend.product_category.index');
+        $prCategories = $this->productCategoryService->getPrCategories();
+
+        $viewData = [
+            'prCategories' => $prCategories,
+            'query' => $request->query()
+        ];
+
+        return view('backend.product_category.index', $viewData);
     }
 
     public function create()
     {
-        // $data = $this->productCategoryService->getAll();
-        return view('backend.product_category.create', [
-            // 'data' => $data,
-        ]);
-    }
-
-    public function update()
-    {
-        // $data = $this->productCategoryService->getAll();
-        return view('backend.product_category.create', [
-            // 'data' => $data,
-        ]);
+        $categories = $this->productCategoryService->getPrCategoriesSort();
+        $viewData = [
+            'categories' => $categories,
+        ];
+        return view('backend.product_category.create', $viewData);
     }
 
     public function store(CreateRequest $request)
     {
-        try {
-            // dd($request);
-            // DB::beginTransaction();
-            // $data = [
+        $data = $request->except('_token');
 
-            // ];
-            // $this->productCategoryService->
-            // DB::commit();
+        try {
+            DB::beginTransaction();
+
+            $data['created_at'] = Carbon::now();
+            if ($request->image) {
+                $image = upload_image('image');
+                if ($image['code'] == 1)
+                    $data['image'] = $image['name'];
+            }
+
+            $category = $this->productCategoryService->store($data);
+            $category->slug = Str::slug($request->name) . '-' . $category->id;
+            $category->save();
+
+            DB::commit();
+            return redirect()->route('product_category.index');
         } catch (Exception $e) {
             DB::rollBack();
             report($e);
+            dd($e);
         }
     }
 
-    public function updateById(UpdateRequest $request, $id, $data)
+    public function edit($id)
+    {
+        $category = $this->productCategoryService->findById($id);
+        $categories = $this->productCategoryService->getAll();
+        $viewData = [
+            'category' => $category,
+            'categories' => $categories
+        ];
+
+        return view('backend.product_category.update', $viewData);
+    }
+
+    public function update(UpdateRequest $request, $id)
     {
         try {
             DB::beginTransaction();
-            $this->productCategoryService->updateById($id, $data);
+            $data = $request->except('_token');
+
+            $data['updated_at'] = Carbon::now();
+
+            if ($request->image) {
+                $image = upload_image('image');
+                if ($image['code'] == 1)
+                    $data['image'] = $image['name'];
+            }
+
+            $category = $this->productCategoryService->updateById($id, $data);
+            $category->slug = Str::slug($request->name) . '-' . $category->id;
+            $category->save();
+
             DB::commit();
+            return redirect()->route('product_category.index');
         } catch (Exception $e) {
             DB::rollBack();
             report($e);
+            dd($e);
         }
     }
 
-    public function deleteById(DeleteRequest $request, $id)
+    public function active($id)
+    {
+        $category = $this->productCategoryService->findById($id);
+        $category->status = !$category->status;
+        $category->save();
+
+        return redirect()->back();
+    }
+
+    public function delete($id)
     {
         try {
             DB::beginTransaction();
             $this->productCategoryService->deleteById($id);
             DB::commit();
+
+            return redirect()->back();
         } catch (Exception $e) {
             DB::rollBack();
             report($e);
         }
     }
 }
-
