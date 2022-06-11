@@ -1,25 +1,23 @@
-const mix = require('laravel-mix');
+let mix = require('laravel-mix');
+let glob = require('glob');
 
-/*
- |--------------------------------------------------------------------------
- | Mix Asset Management
- |--------------------------------------------------------------------------
- |
- | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel application. By default, we are compiling the Sass
- | file for the application as well as bundling up all the JS files.
- |
- */
+mix.options({
+    processCssUrls: false,
+    clearConsole: true,
+    terser: {
+        extractComments: false,
+    }
+});
 
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');
+// Run all webpack.mix.js in app
+glob.sync('./platform/**/**/webpack.mix.js').forEach(item => require(item));
 
-mix.js('resources/js/clients/home.js', 'public/js/clients');
-mix.js('resources/js/admin/product/index.js', 'public/js/admin/product');
-mix.js('resources/js/admin/product/create.js', 'public/js/admin/product');
-mix.js('resources/js/admin/order/create.js', 'public/js/admin/order');
-mix.js('resources/js/admin/product/product.js', 'public/js/admin/product');
+// Run only for a package, replace [package] by the name of package you want to compile assets
+// require('./platform/packages/[package]/webpack.mix.js');
 
-mix.js('resources/js/admin/blog/index.js', 'public/js/admin/blog');
-mix.js('resources/js/admin/blog/create.js', 'public/js/admin/blog');
-mix.js('resources/js/admin/blog/blog.js', 'public/js/admin/blog');
+// Run only for a plugin, replace [plugin] by the name of plugin you want to compile assets
+// require('./platform/plugins/[plugin]/webpack.mix.js');
+
+// Run only for themes, you shouldn't modify below config, just uncomment if you want to compile only theme's assets
+// glob.sync('./platform/themes/**/webpack.mix.js').forEach(item => require(item));
+
