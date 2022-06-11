@@ -11,7 +11,7 @@
             <div>- Content:</div>
             <div style="border: 1px solid rgba(0,0,0,.1); padding: 10px; margin-top: 10px;">
                 <div>[simple-slider key="home-slider" ads="VC2C8Q1UGCBG" background="general/slider-bg.jpg"][/simple-slider]</div>
-                <div>[featured-product-categories title="Browse by Category"][/featured-product-categories]</div>
+                <div>[featured-product-categories title="Browse by Category11"][/featured-product-categories]</div>
                 <div>[featured-brands title="Featured Brands"][/featured-brands]</div>
                 <div>[flash-sale title="Just Landing11x" flash_sale_id="1"][/flash-sale]</div>
                 <div>[product-category-products title="Just Landing" category_id="23"][/product-category-products]</div>
