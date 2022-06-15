@@ -17,7 +17,7 @@
                 <div>[product-category-products title="Just Landing" category_id="23"][/product-category-products]</div>
                 <div>[theme-ads key_1="IZ6WU8KUALYD" key_2="ILSFJVYFGCPZ" key_3="ZDOZUZZIU7FT"][/theme-ads]</div>
                 <div>[featured-products title="Featured products"][/featured-products]</div>
-                <div>[product-collections title="Essential Products"][/product-collections]</div>
+                <div>[product-collections title="Sản phẩm thiết yếu"][/product-collections]</div>
                 <div>[product-category-products category_id="18"][/product-category-products]</div>
                 <div>[featured-posts title="Health Daily" background="general/blog-bg.jpg"
                 app_enabled="1"

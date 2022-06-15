@@ -35,7 +35,7 @@ class PageSeeder extends BaseSeeder
                     Html::tag('div', '[product-category-products title="Just Landing" category_id="23"][/product-category-products]') .
                     Html::tag('div', '[theme-ads key_1="IZ6WU8KUALYD" key_2="ILSFJVYFGCPZ" key_3="ZDOZUZZIU7FT"][/theme-ads]') .
                     Html::tag('div', '[featured-products title="Featured products"][/featured-products]') .
-                    Html::tag('div', '[product-collections title="Essential Products"][/product-collections]') .
+                    Html::tag('div', '[product-collections title="Sản phẩm thiết yếu"][/product-collections]') .
                     Html::tag('div', '[product-category-products category_id="18"][/product-category-products]') .
                     Html::tag('div', '[featured-posts title="Health Daily" background="general/blog-bg.jpg"
                         app_enabled="1"
@@ -152,7 +152,7 @@ launching soon." social_title="Connect us on social networks" image="general/com
                     Html::tag('div', '[product-category-products title="Just Landing" category_id="23"][/product-category-products]') .
                     Html::tag('div', '[theme-ads key_1="IZ6WU8KUALYD" key_2="ILSFJVYFGCPZ" key_3="ZDOZUZZIU7FT"][/theme-ads]') .
                     Html::tag('div', '[featured-products title="Featured products"][/featured-products]') .
-                    Html::tag('div', '[product-collections title="Essential Products"][/product-collections]') .
+                    Html::tag('div', '[product-collections title="Sản phẩm thiết yếu"][/product-collections]') .
                     Html::tag('div', '[product-category-products category_id="18"][/product-category-products]')
                 ,
             ],
